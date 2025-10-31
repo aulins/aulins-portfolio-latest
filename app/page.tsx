@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
     const [formData, setFormData] = useState({
@@ -13,6 +13,15 @@ export default function Home() {
         message: string;
     }>({ type: null, message: "" });
     const [loading, setLoading] = useState(false);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+    useEffect(() => {
+        const handleMouseMove = (e: MouseEvent) => {
+            setMousePosition({ x: e.clientX, y: e.clientY });
+        };
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -50,295 +59,324 @@ export default function Home() {
         });
     };
 
+    const skills = [
+        { name: "React", icon: "⚛️", color: "from-blue-400 to-cyan-400" },
+        { name: "Next.js", icon: "▲", color: "from-slate-400 to-zinc-400" },
+        { name: "TypeScript", icon: "TS", color: "from-blue-500 to-blue-600" },
+        { name: "Tailwind", icon: "🎨", color: "from-cyan-400 to-teal-400" },
+        { name: "Node.js", icon: "🟢", color: "from-green-400 to-emerald-400" },
+        { name: "Supabase", icon: "🔥", color: "from-emerald-400 to-green-500" },
+        { name: "Git", icon: "📦", color: "from-orange-400 to-red-400" },
+        { name: "API", icon: "🔌", color: "from-purple-400 to-pink-400" },
+    ];
+
     const projects = [
         {
             title: "E-Commerce Platform",
-            description: "Full-stack e-commerce dengan payment gateway integration",
+            description: "Full-stack online store dengan payment integration dan admin dashboard",
             tech: ["Next.js", "Stripe", "PostgreSQL"],
-            gradient: "from-blue-500 to-cyan-500",
+            year: "2024",
         },
         {
-            title: "Task Management App",
-            description: "Real-time collaborative task management dengan drag & drop",
+            title: "Task Management",
+            description: "Real-time collaborative workspace dengan drag & drop interface",
             tech: ["React", "Firebase", "Tailwind"],
-            gradient: "from-purple-500 to-pink-500",
+            year: "2024",
         },
         {
             title: "Analytics Dashboard",
-            description: "Interactive dashboard dengan data visualization",
+            description: "Interactive data visualization dengan real-time updates",
             tech: ["Next.js", "Chart.js", "API"],
-            gradient: "from-orange-500 to-red-500",
+            year: "2023",
         },
     ];
 
-    const skills = [
-        { name: "React", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "TypeScript", level: 80 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Node.js", level: 75 },
-        { name: "Supabase", level: 70 },
-        { name: "Git", level: 85 },
-        { name: "API Development", level: 80 },
-    ];
-
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-            {/* Header/Navbar */}
-            <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <div className="flex justify-between items-center">
-                        <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">MyPortfolio</h1>
-                        <nav className="hidden md:flex space-x-8">
-                            <a href="#about" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
-                                About
-                            </a>
-                            <a href="#skills" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
-                                Skills
-                            </a>
-                            <a href="#projects" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
-                                Projects
-                            </a>
-                            <a href="#contact" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">
-                                Contact
-                            </a>
-                        </nav>
-                    </div>
-                </div>
-            </header>
+        <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
+            {/* Animated Background */}
+            <div className="fixed inset-0 z-0">
+                {/* Gradient Orbs */}
+                <div
+                    className="absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl transition-all duration-1000"
+                    style={{
+                        top: `${mousePosition.y / 10}px`,
+                        left: `${mousePosition.x / 10}px`,
+                    }}
+                ></div>
+                <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
-            {/* Hero Section */}
-            <section className="relative overflow-hidden py-20 lg:py-32">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                    <div className="text-center">
-                        <div className="inline-block animate-bounce">
-                            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-5xl font-bold shadow-2xl">A</div>
-                        </div>
-                        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">Fullstack Developer</h1>
-                        <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">Membangun aplikasi web modern dengan React, Next.js, dan teknologi terkini</p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="#projects" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300">
-                                Lihat Projects
+                {/* Grid Pattern */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(30,58,138,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(30,58,138,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10">
+                {/* Navigation */}
+                <nav className="fixed top-0 w-full backdrop-blur-md bg-slate-950/80 border-b border-blue-500/20 z-50">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                        <div className="flex justify-between items-center">
+                            <a href="#" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                                Portfolio
                             </a>
-                            <a href="#contact" className="px-8 py-4 bg-white text-indigo-600 rounded-full font-semibold border-2 border-indigo-600 hover:bg-indigo-50 hover:scale-105 transition-all duration-300">
-                                Hubungi Saya
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* About Section */}
-            <section id="about" className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Tentang Saya</h2>
-                        <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-8"></div>
-                        <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                            Saya adalah seorang fullstack developer yang passionate dalam menciptakan pengalaman digital yang menarik dan fungsional. Dengan pengalaman dalam berbagai teknologi modern, saya fokus pada pengembangan aplikasi
-                            web yang scalable dan user-friendly.
-                        </p>
-                        <p className="text-lg text-gray-700 leading-relaxed">
-                            Saya percaya bahwa kode yang baik adalah kode yang bersih, maintainable, dan memberikan nilai nyata bagi pengguna. Mari berkolaborasi untuk mewujudkan ide Anda menjadi kenyataan!
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            {/* Skills Section */}
-            <section id="skills" className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Keahlian</h2>
-                        <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-4"></div>
-                        <p className="text-gray-600">Teknologi yang saya kuasai</p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        {skills.map((skill, index) => (
-                            <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                                <div className="flex justify-between items-center mb-3">
-                                    <h3 className="font-semibold text-gray-900 text-lg">{skill.name}</h3>
-                                    <span className="text-indigo-600 font-bold">{skill.level}%</span>
-                                </div>
-                                <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
-                                    <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-3 rounded-full transition-all duration-1000 ease-out" style={{ width: `${skill.level}%` }}></div>
-                                </div>
+                            <div className="hidden md:flex space-x-8">
+                                <a href="#home" className="hover:text-blue-400 transition-colors">
+                                    Home
+                                </a>
+                                <a href="#about" className="hover:text-blue-400 transition-colors">
+                                    About
+                                </a>
+                                <a href="#skills" className="hover:text-blue-400 transition-colors">
+                                    Skills
+                                </a>
+                                <a href="#projects" className="hover:text-blue-400 transition-colors">
+                                    Projects
+                                </a>
+                                <a href="#contact" className="hover:text-blue-400 transition-colors">
+                                    Contact
+                                </a>
                             </div>
-                        ))}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </nav>
 
-            {/* Projects Section */}
-            <section id="projects" className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Projects</h2>
-                        <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-4"></div>
-                        <p className="text-gray-600">Beberapa project yang telah saya kerjakan</p>
+                {/* Hero Section */}
+                <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <div className="mb-8 animate-fadeIn">
+                            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-5xl font-bold shadow-2xl shadow-blue-500/50 animate-float">👨‍💻</div>
+                        </div>
+                        <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fadeIn">
+                            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">Fullstack Developer</span>
+                        </h1>
+                        <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto animate-fadeIn delay-200">Crafting beautiful web experiences with modern technologies</p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn delay-300">
+                            <a href="#projects" className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
+                                View Projects
+                                <span className="inline-block group-hover:translate-x-1 transition-transform ml-2">→</span>
+                            </a>
+                            <a href="#contact" className="px-8 py-4 border-2 border-blue-500 rounded-full font-semibold hover:bg-blue-500/10 transition-all duration-300 hover:scale-105">
+                                Get In Touch
+                            </a>
+                        </div>
                     </div>
+                </section>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {projects.map((project, index) => (
-                            <div key={index} className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-                                <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white text-6xl font-bold`}>{project.title[0]}</div>
-                                <div className="p-6">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">{project.title}</h3>
-                                    <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                {/* About Section */}
+                <section id="about" className="py-32 px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-5xl font-bold mb-12 text-center">
+                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">About Me</span>
+                        </h2>
+                        <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-8 md:p-12 hover:border-blue-500/40 transition-all duration-300">
+                            <p className="text-lg text-slate-300 leading-relaxed mb-6">
+                                Hi! Saya adalah seorang fullstack developer yang passionate dalam menciptakan aplikasi web yang modern, responsif, dan user-friendly. Dengan pengalaman dalam berbagai teknologi web terkini, saya fokus pada
+                                pengembangan solusi yang tidak hanya terlihat bagus, tetapi juga berfungsi dengan sempurna.
+                            </p>
+                            <p className="text-lg text-slate-300 leading-relaxed">
+                                Saya percaya bahwa kode yang baik adalah kode yang clean, maintainable, dan scalable. Mari berkolaborasi untuk mewujudkan ide Anda menjadi kenyataan digital yang menakjubkan!
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Skills Section */}
+                <section id="skills" className="py-32 px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <h2 className="text-5xl font-bold mb-12 text-center">
+                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Skills & Technologies</span>
+                        </h2>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            {skills.map((skill, index) => (
+                                <div
+                                    key={index}
+                                    className="group backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/60 hover:bg-slate-900/70 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20"
+                                    style={{ animationDelay: `${index * 100}ms` }}
+                                >
+                                    <div className={`text-5xl mb-4 bg-gradient-to-br ${skill.color} bg-clip-text text-transparent font-bold`}>{skill.icon}</div>
+                                    <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">{skill.name}</h3>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Projects Section */}
+                <section id="projects" className="py-32 px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <h2 className="text-5xl font-bold mb-12 text-center">
+                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Featured Projects</span>
+                        </h2>
+                        <div className="space-y-8">
+                            {projects.map((project, index) => (
+                                <div key={index} className="group backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-8 hover:border-blue-500/60 hover:bg-slate-900/70 transition-all duration-300 hover:translate-x-2">
+                                    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                        <div>
+                                            <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
+                                            <p className="text-slate-400 mb-4 md:mb-0">{project.description}</p>
+                                        </div>
+                                        <span className="text-blue-400 font-semibold">{project.year}</span>
+                                    </div>
                                     <div className="flex flex-wrap gap-2">
                                         {project.tech.map((tech, techIndex) => (
-                                            <span key={techIndex} className="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium">
+                                            <span key={techIndex} className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-blue-300 font-medium">
                                                 {tech}
                                             </span>
                                         ))}
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            {/* Contact Form Section */}
-            <section id="contact" className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">Hubungi Saya</h2>
-                        <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto mb-4"></div>
-                        <p className="text-gray-600">Punya project atau pertanyaan? Mari diskusi!</p>
-                    </div>
+                {/* Contact Section */}
+                <section id="contact" className="py-32 px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <h2 className="text-5xl font-bold mb-12 text-center">
+                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Get In Touch</span>
+                        </h2>
+                        <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-8 md:p-12 hover:border-blue-500/40 transition-all duration-300">
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div>
+                                    <label htmlFor="name" className="block text-sm font-semibold text-slate-300 mb-2">
+                                        Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 bg-slate-950/50 border border-blue-500/30 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white placeholder-slate-500"
+                                        placeholder="Your name"
+                                    />
+                                </div>
 
-                    <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12">
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div>
-                                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                                    Nama Lengkap
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
-                                    placeholder="John Doe"
-                                />
-                            </div>
+                                <div>
+                                    <label htmlFor="email" className="block text-sm font-semibold text-slate-300 mb-2">
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 bg-slate-950/50 border border-blue-500/30 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white placeholder-slate-500"
+                                        placeholder="your@email.com"
+                                    />
+                                </div>
 
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
-                                    placeholder="john@example.com"
-                                />
-                            </div>
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-semibold text-slate-300 mb-2">
+                                        Message
+                                    </label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        rows={6}
+                                        className="w-full px-4 py-3 bg-slate-950/50 border border-blue-500/30 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none text-white placeholder-slate-500"
+                                        placeholder="Your message..."
+                                    />
+                                </div>
 
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                                    Pesan
-                                </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    required
-                                    rows={6}
-                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 resize-none"
-                                    placeholder="Tulis pesan Anda di sini..."
-                                />
-                            </div>
-
-                            {status.message && (
-                                <div className={`p-4 rounded-xl ${status.type === "success" ? "bg-green-50 text-green-800 border-2 border-green-200" : "bg-red-50 text-red-800 border-2 border-red-200"} animate-pulse`}>{status.message}</div>
-                            )}
-
-                            <button
-                                type="submit"
-                                disabled={loading}
-                                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 px-6 rounded-xl font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
-                            >
-                                {loading ? (
-                                    <span className="flex items-center justify-center">
-                                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                        </svg>
-                                        Mengirim...
-                                    </span>
-                                ) : (
-                                    "Kirim Pesan"
+                                {status.message && (
+                                    <div className={`p-4 rounded-xl border ${status.type === "success" ? "bg-green-500/10 text-green-400 border-green-500/30" : "bg-red-500/10 text-red-400 border-red-500/30"}`}>{status.message}</div>
                                 )}
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </section>
 
-            {/* Footer */}
-            <footer className="bg-gray-900 text-white py-12">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-3 gap-8 mb-8">
-                        <div>
-                            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">MyPortfolio</h3>
-                            <p className="text-gray-400">Fullstack Developer passionate tentang teknologi dan inovasi.</p>
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-4 px-6 rounded-xl font-semibold hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                                >
+                                    {loading ? (
+                                        <span className="flex items-center justify-center">
+                                            <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            Sending...
+                                        </span>
+                                    ) : (
+                                        "Send Message"
+                                    )}
+                                </button>
+                            </form>
                         </div>
-                        <div>
-                            <h4 className="font-semibold mb-4">Quick Links</h4>
-                            <ul className="space-y-2">
-                                <li>
-                                    <a href="#about" className="text-gray-400 hover:text-white transition-colors">
-                                        About
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#skills" className="text-gray-400 hover:text-white transition-colors">
-                                        Skills
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#projects" className="text-gray-400 hover:text-white transition-colors">
-                                        Projects
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#contact" className="text-gray-400 hover:text-white transition-colors">
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 className="font-semibold mb-4">Connect</h4>
-                            <div className="flex space-x-4">
-                                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors">
-                                    <span className="text-xl">G</span>
+                    </div>
+                </section>
+
+                {/* Footer */}
+                <footer className="border-t border-blue-500/20 py-12">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="flex flex-col md:flex-row justify-between items-center">
+                            <div className="mb-6 md:mb-0">
+                                <p className="text-slate-400">© 2024 Portfolio. Built with Next.js & Supabase.</p>
+                            </div>
+                            <div className="flex space-x-6">
+                                <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+                                    <span className="text-2xl">📧</span>
                                 </a>
-                                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors">
-                                    <span className="text-xl">L</span>
+                                <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+                                    <span className="text-2xl">💼</span>
                                 </a>
-                                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors">
-                                    <span className="text-xl">T</span>
+                                <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
+                                    <span className="text-2xl">🐙</span>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-                        <p>© 2024 MyPortfolio. Built with Next.js & Supabase.</p>
-                    </div>
-                </div>
-            </footer>
+                </footer>
+            </div>
+
+            <style jsx>{`
+                @keyframes fadeIn {
+                    from {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                @keyframes float {
+                    0%,
+                    100% {
+                        transform: translateY(0);
+                    }
+                    50% {
+                        transform: translateY(-10px);
+                    }
+                }
+
+                .animate-fadeIn {
+                    animation: fadeIn 1s ease-out forwards;
+                }
+
+                .animate-float {
+                    animation: float 3s ease-in-out infinite;
+                }
+
+                .delay-200 {
+                    animation-delay: 200ms;
+                }
+
+                .delay-300 {
+                    animation-delay: 300ms;
+                }
+
+                .delay-1000 {
+                    animation-delay: 1000ms;
+                }
+            `}</style>
         </div>
     );
 }
