@@ -64,11 +64,11 @@ export default function Home() {
                             alt="Profile"
                             className="w-64 h-64 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-5xl font-bold shadow-2xl shadow-blue-500/50 animate-float"
                         />
-                        <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fadeIn">
+                        <h2 className="text-6xl md:text-8xl font-bold mb-6 animate-fadeIn">
                             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                                 Hi. I&apos;m Ulya. <br />A Developer
                             </span>
-                        </h1>
+                        </h2>
                         <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto animate-fadeIn delay-200">
                             I&apos;m an Informatics graduate passionate about developing modern web systems that integrate data, AI, and DevOps for smarter solutions.
                         </p>
