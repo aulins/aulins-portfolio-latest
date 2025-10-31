@@ -66,11 +66,11 @@ export default function Home() {
                         />
                         <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fadeIn">
                             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                                Hi. I'm Ulya. <br />A Developer
+                                Hi. I&apos;m Ulya. <br />A Developer
                             </span>
                         </h1>
                         <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto animate-fadeIn delay-200">
-                            I'm an Informatics graduate passionate about developing modern web systems that integrate data, AI, and DevOps for smarter solutions.
+                            I&apos;m an Informatics graduate passionate about developing modern web systems that integrate data, AI, and DevOps for smarter solutions.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn delay-300">
                             <Link href="/projects" className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">

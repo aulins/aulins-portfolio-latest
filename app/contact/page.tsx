@@ -101,7 +101,7 @@ export default function Contact() {
                     <h1 className="text-5xl font-bold mb-6 text-center">
                         <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Get In Touch</span>
                     </h1>
-                    <p className="text-center text-slate-400 text-lg mb-16 max-w-2xl mx-auto">Have a question or want to work together? Drop me a message and I'll get back to you as soon as possible!</p>
+                    <p className="text-center text-slate-400 text-lg mb-16 max-w-2xl mx-auto">Have a question or want to work together? Drop me a message and I&apos;ll get back to you as soon as possible!</p>
 
                     <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-8 md:p-12 hover:border-blue-500/40 transition-all duration-300">
                         <form onSubmit={handleSubmit} className="space-y-6">

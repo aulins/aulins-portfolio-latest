@@ -25,7 +25,7 @@ export default function Projects() {
         },
         {
             title: "Task Management App",
-            description: "Real-time collaborative workspace dengan drag & drop interface, team collaboration features, dan notification system.",
+            description: "Real-time collaborative workspace dengan drag and drop interface, team collaboration features, dan notification system.",
             tech: ["React", "Firebase", "Tailwind", "Framer Motion"],
             year: "2024",
             status: "In Progress",
@@ -51,7 +51,6 @@ export default function Projects() {
 
     return (
         <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
-            {/* Animated Background */}
             <div className="fixed inset-0 z-0">
                 <div className="absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl transition-all duration-1000" style={{ top: `${mousePosition.y / 10}px`, left: `${mousePosition.x / 10}px` }}></div>
                 <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -59,7 +58,6 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(30,58,138,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(30,58,138,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
             </div>
 
-            {/* Navigation */}
             <nav className="fixed top-0 w-full backdrop-blur-md bg-slate-950/80 border-b border-blue-500/20 z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                     <div className="flex justify-between items-center">
@@ -84,13 +82,12 @@ export default function Projects() {
                 </div>
             </nav>
 
-            {/* Content */}
             <div className="relative z-10 pt-32 pb-20 px-4">
                 <div className="max-w-6xl mx-auto">
                     <h1 className="text-5xl font-bold mb-6 text-center">
                         <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Featured Projects</span>
                     </h1>
-                    <p className="text-center text-slate-400 text-lg mb-16 max-w-2xl mx-auto">A collection of projects I&apos;ve worked on, showcasing my skills in web development and problem-solving.</p>
+                    <p className="text-center text-slate-400 text-lg mb-16 max-w-2xl mx-auto">A collection of projects I have worked on, showcasing my skills in web development and problem-solving.</p>
 
                     <div className="space-y-8">
                         {projects.map((project, index) => (
@@ -135,12 +132,11 @@ export default function Projects() {
                         ))}
                     </div>
 
-                    {/* CTA Section */}
                     <div className="mt-20 text-center backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-12">
                         <h2 className="text-3xl font-bold mb-4">
                             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Have a project in mind?</span>
                         </h2>
-                        <p className="text-slate-400 text-lg mb-8">Let&apos;s collaborate and bring your ideas to life!</p>
+                        <p className="text-slate-400 text-lg mb-8">Let us collaborate and bring your ideas to life!</p>
                         <Link href="/contact" className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
                             Get In Touch
                         </Link>
@@ -148,11 +144,10 @@ export default function Projects() {
                 </div>
             </div>
 
-            {/* Footer */}
             <footer className="border-t border-blue-500/20 py-12 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <p className="text-slate-400 mb-6 md:mb-0">© 2024 Portfolio. Built with Next.js & Supabase.</p>
+                        <p className="text-slate-400 mb-6 md:mb-0">© 2024 Portfolio. Built with Next.js and Supabase.</p>
                         <div className="flex space-x-6">
                             <a href="mailto:your@email.com" className="text-slate-400 hover:text-blue-400 transition-colors text-2xl">
                                 📧
