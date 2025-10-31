@@ -144,7 +144,11 @@ export default function Home() {
                 <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="mb-8 animate-fadeIn">
-                            <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-5xl font-bold shadow-2xl shadow-blue-500/50 animate-float">👨‍💻</div>
+                            <img
+                                src="/profil.png"
+                                alt="Profile"
+                                className="w-64 h-64 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-5xl font-bold shadow-2xl shadow-blue-500/50 animate-float"
+                            />
                         </div>
                         <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fadeIn">
                             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">Fullstack Developer</span>
