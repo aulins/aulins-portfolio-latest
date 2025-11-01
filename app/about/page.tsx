@@ -193,8 +193,8 @@ export default function About() {
                                 <div className="sticky top-32">
                                     <div className="relative inline-block">
                                         <img src="/fullbody.png" alt="Full Body Photo" className="w-full max-w-md mx-auto rounded-3xl shadow-2xl shadow-blue-500/30 border-4 border-blue-500/20" />
-                                        <div className="absolute -top-4 -right-4 text-3xl animate-spin-slow">✨</div>
-                                        <div className="absolute -bottom-4 -left-4 text-2xl animate-bounce-slow">⭐</div>
+                                        <div className="absolute -top-4 -right-4 text-3xl animate-spin-slow">𓇼</div>
+                                        <div className="absolute -bottom-4 -left-4 text-2xl animate-bounce-slow">✧</div>
                                     </div>
                                 </div>
                             </div>
