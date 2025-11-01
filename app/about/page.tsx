@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
 
 export default function About() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -159,29 +160,7 @@ export default function About() {
             </div>
 
             {/* Navigation */}
-            <nav className="fixed top-0 w-full backdrop-blur-md bg-slate-950/80 border-b border-blue-500/20 z-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <div className="flex justify-between items-center">
-                        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                            Portfolio
-                        </Link>
-                        <div className="hidden md:flex space-x-8">
-                            <Link href="/" className="hover:text-blue-400 transition-colors">
-                                Home
-                            </Link>
-                            <Link href="/about" className="text-blue-400">
-                                Meet Me
-                            </Link>
-                            <Link href="/projects" className="hover:text-blue-400 transition-colors">
-                                Projects
-                            </Link>
-                            <Link href="/contact" className="hover:text-blue-400 transition-colors">
-                                Get in Touch
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
 
             <div className="relative z-10">
                 {/* Hero Section - Photo + Bio */}

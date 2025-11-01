@@ -71,6 +71,7 @@ export default function Contact() {
             </div>
 
             {/* Navigation */}
+            <Navbar />
 
             {/* Content */}
             <div className="relative z-10 pt-32 pb-20 px-4">
