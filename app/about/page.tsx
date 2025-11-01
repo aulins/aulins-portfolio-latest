@@ -10,13 +10,13 @@ export default function About() {
     const education = [
         {
             degree: "Bachelor of Computer Science",
-            school: "Telkom University",
-            year: "2020 - 2024",
+            school: "Gunadarma University",
+            year: "2021 - 2025",
             description: "Focus on Software Engineering and Data Science",
         },
         {
             degree: "High School",
-            school: "SMAN 1 Bandung",
+            school: "MAN 2 Garut",
             year: "2017 - 2020",
             description: "Science Major",
         },
