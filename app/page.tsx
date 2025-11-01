@@ -189,7 +189,7 @@ export default function Home() {
                                     className="group backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 text-center hover:border-blue-500/60 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-blue-500/20 relative overflow-hidden"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                                    <div className={`text-5xl mb-3 bg-gradient-to-br ${tech.color} bg-clip-text text-transparent`}>{tech.icon}</div>
+                                    <div className={``}>{tech.icon}</div>
                                     <div className="text-sm font-semibold group-hover:text-blue-400 transition-colors">{tech.name}</div>
                                 </div>
                             ))}
@@ -274,7 +274,7 @@ export default function Home() {
                         <div className="grid md:grid-cols-3 gap-12 mb-12">
                             {/* About/Bio Column */}
                             <div>
-                                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">Ulya A. ✨</h3>
+                                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text mb-4">Ulya A. ✨</h3>
                                 <p className="text-slate-400 leading-relaxed mb-6">Fullstack Developer passionate about crafting beautiful, responsive interfaces and diving into data to make experiences smarter and more impactful.</p>
                                 <div className="flex space-x-4">
                                     <a
@@ -376,9 +376,9 @@ export default function Home() {
                         {/* Bottom Bar */}
                         <div className="border-t border-blue-500/10 pt-8">
                             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                                <p className="text-slate-500 text-sm">© 2024 By Ulya Aulia</p>
+                                <p className="text-slate-500 text-sm">© 2025 By Ulya A.</p>
                                 <p className="text-slate-500 text-sm flex items-center gap-2">
-                                    Made with <span className="text-red-500 animate-pulse">❤️</span> Love u!
+                                    Made with <span className="text-red-500 animate-pulse">❤️</span>u !
                                 </p>
                             </div>
                         </div>
