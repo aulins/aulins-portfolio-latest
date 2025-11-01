@@ -170,13 +170,13 @@ export default function About() {
                                 Home
                             </Link>
                             <Link href="/about" className="text-blue-400">
-                                About
+                                Meet Me
                             </Link>
                             <Link href="/projects" className="hover:text-blue-400 transition-colors">
                                 Projects
                             </Link>
                             <Link href="/contact" className="hover:text-blue-400 transition-colors">
-                                Contact
+                                Get in Touch
                             </Link>
                         </div>
                     </div>
