@@ -322,7 +322,7 @@ export default function About() {
                                         <span className="px-4 py-2 bg-pink-500/20 border border-pink-500/30 rounded-full text-sm text-pink-300">🎁 Gift Bouquets</span>
                                     </div>
                                     <a
-                                        href="https://www.instagram.com/heygifts.fleur/"
+                                        href="https://www.instagram.com/aulia_intan12/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full font-semibold hover:shadow-xl hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105"
