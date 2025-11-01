@@ -181,7 +181,7 @@ export default function About() {
                             {/* Right - Bio + Education */}
                             <div>
                                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                                    <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text ">About Me 👋</span>
+                                    <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text ">About Me 👋🏻</span>
                                 </h1>
 
                                 {/* Bio Paragraphs */}
@@ -493,7 +493,7 @@ export default function About() {
                             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                                 <p className="text-slate-500 text-sm">© 2024 By Ulya</p>
                                 <p className="text-slate-500 text-sm flex items-center gap-2">
-                                    Made with <span className="text-red-500 animate-pulse">❤️</span> Love u!
+                                    Made with <span className="text-red-500 animate-pulse">💙</span> Love u!
                                 </p>
                             </div>
                         </div>
