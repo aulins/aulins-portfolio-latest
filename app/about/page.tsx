@@ -18,7 +18,7 @@ export default function About() {
         {
             degree: "High School",
             school: "MAN 2 Garut",
-            year: "2017 - 2020",
+            year: "",
             description: "Science Major",
         },
     ];
