@@ -140,13 +140,13 @@ export default function Home() {
                                 Home
                             </Link>
                             <Link href="/about" className="hover:text-blue-400 transition-colors">
-                                About
+                                Meet Me
                             </Link>
                             <Link href="/projects" className="hover:text-blue-400 transition-colors">
                                 Projects
                             </Link>
                             <Link href="/contact" className="hover:text-blue-400 transition-colors">
-                                Contact
+                                Get in Touch
                             </Link>
                         </div>
                     </div>
