@@ -52,25 +52,25 @@ export default function Home() {
 
     const latestProjects = [
         {
-            title: "E-Commerce Platform",
+            title: "Batik Image Classification",
             description: "Full-stack online store with payment integration",
             tech: ["Next.js", "Stripe", "PostgreSQL"],
-            image: "🛒",
-            year: "2024",
+            image: <img src="/skripsi.png" alt="image classification" />,
+            year: "2025",
         },
         {
             title: "Analytics Dashboard",
             description: "Real-time data visualization with Grafana",
             tech: ["Python", "Grafana", "Prometheus"],
-            image: "📊",
-            year: "2024",
+            image: <img src="/dashboard.png" alt="dashboard" />,
+            year: "2025",
         },
         {
             title: "ML Prediction Model",
             description: "Machine learning model for sales forecasting",
             tech: ["Python", "TensorFlow", "Pandas"],
-            image: "🤖",
-            year: "2023",
+            image: <img src="/prediksi.png" alt="prediksi" />,
+            year: "2025",
         },
     ];
 
@@ -179,7 +179,9 @@ export default function Home() {
                 <section className="py-20 px-4 bg-slate-900/30">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-4xl font-bold mb-6 text-center">
-                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Technologies I Love</span>
+                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                                Technologies I <span className="text-red-500 animate-pulse">💙</span>
+                            </span>
                         </h2>
                         <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">Tools and technologies I use to build amazing projects</p>
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
@@ -341,11 +343,19 @@ export default function Home() {
                             </div>
 
                             {/* Contact Info Column */}
+                            {/* Contact Info Column */}
                             <div>
                                 <h4 className="font-semibold text-lg mb-4 text-blue-400">Contact Info</h4>
                                 <ul className="space-y-4">
+                                    {/* Email */}
                                     <li className="flex items-start gap-3">
-                                        <span className="text-2xl">📧</span>
+                                        <span className="mt-0.5 text-blue-400" aria-hidden="true">
+                                            {/* Icon: Envelope (SVG) */}
+                                            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                                                <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+                                                <path d="M3 7l9 6 9-6" />
+                                            </svg>
+                                        </span>
                                         <div>
                                             <div className="text-sm text-slate-500 mb-1">Email</div>
                                             <a href="mailto:founder@ainash.my.id" className="text-slate-300 hover:text-blue-400 transition-colors">
@@ -353,17 +363,16 @@ export default function Home() {
                                             </a>
                                         </div>
                                     </li>
+
+                                    {/* Location */}
                                     <li className="flex items-start gap-3">
-                                        <span className="text-2xl">📱</span>
-                                        <div>
-                                            <div className="text-sm text-slate-500 mb-1">Phone</div>
-                                            <a href="tel:+62123456789" className="text-slate-300 hover:text-blue-400 transition-colors">
-                                                +62 822 1526 6070
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <span className="text-2xl">📍</span>
+                                        <span className="mt-0.5 text-blue-400" aria-hidden="true">
+                                            {/* Icon: Map Pin (SVG) */}
+                                            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M12 21s-6-5.4-6-10a6 6 0 1 1 12 0c0 4.6-6 10-6 10z" />
+                                                <circle cx="12" cy="11" r="2.5" />
+                                            </svg>
+                                        </span>
                                         <div>
                                             <div className="text-sm text-slate-500 mb-1">Location</div>
                                             <p className="text-slate-300">Bandung, Indonesia</p>
@@ -378,7 +387,7 @@ export default function Home() {
                             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                                 <p className="text-slate-500 text-sm">© 2025 By Ulya A.</p>
                                 <p className="text-slate-500 text-sm flex items-center gap-2">
-                                    Made with <span className="text-red-500 animate-pulse">❤️</span>u !
+                                    Made with <span className="text-red-500 animate-pulse">💙</span>u !
                                 </p>
                             </div>
                         </div>
