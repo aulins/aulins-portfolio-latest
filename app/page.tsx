@@ -31,25 +31,21 @@ export default function Home() {
         {
             title: "Web Development",
             description: "Building responsive and modern web applications with latest technologies",
-            icon: "💻",
             skills: ["React", "Next.js", "CodeIgniter"],
         },
         {
             title: "Backend Development",
             description: "Creating robust REST APIs and server-side applications",
-            icon: "⚙️",
             skills: ["Python", "SQL", "REST API"],
         },
         {
             title: "Data Analysis",
             description: "Analyzing data and building ML models for insights",
-            icon: "📊",
             skills: ["Python", "Pandas", "TensorFlow"],
         },
         {
             title: "DevOps & Monitoring",
             description: "Setting up monitoring systems and server management",
-            icon: "🔧",
             skills: ["Linux", "Grafana", "Prometheus"],
         },
     ];
@@ -215,7 +211,6 @@ export default function Home() {
                                     className="group backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-8 hover:border-blue-500/60 hover:bg-slate-900/70 transition-all duration-300 relative overflow-hidden"
                                 >
                                     <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
-                                    <div className="text-5xl mb-4">{service.icon}</div>
                                     <h3 className="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">{service.title}</h3>
                                     <p className="text-slate-400 mb-4 leading-relaxed">{service.description}</p>
                                     <div className="flex flex-wrap gap-2">

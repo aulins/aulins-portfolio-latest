@@ -10,7 +10,7 @@ export default function About() {
     // Education Data
     const education = [
         {
-            degree: "Bachelor of Computer Science",
+            degree: "Bachelor of Informatics",
             school: "Gunadarma University",
             year: "2021 - 2025",
             description: "Focus on Software Engineering and Data Science",
@@ -181,14 +181,14 @@ export default function About() {
                             {/* Right - Bio + Education */}
                             <div>
                                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                                    <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">About Me 👋</span>
+                                    <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text ">About Me 👋</span>
                                 </h1>
 
                                 {/* Bio Paragraphs */}
                                 <div className="space-y-6 mb-12">
                                     <p className="text-lg text-slate-300 leading-relaxed">
-                                        Hello! I am Ulya Aulia, a passionate fullstack developer with a strong interest in creating modern web applications that integrate data science, artificial intelligence, and DevOps practices. I love
-                                        turning complex problems into elegant, scalable solutions.
+                                        Hello! I am Aulia Intan Shafira, a passionate fullstack developer with a strong interest in creating modern web applications that integrate data science, artificial intelligence, and DevOps practices.
+                                        I love turning complex problems into elegant, scalable solutions.
                                     </p>
                                     <p className="text-lg text-slate-300 leading-relaxed">
                                         With over 2 years of experience in software development, I have worked on various projects ranging from e-commerce platforms to machine learning applications. I am constantly learning new technologies
@@ -199,7 +199,7 @@ export default function About() {
                                 {/* Education */}
                                 <div>
                                     <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                                        <span className="text-4xl">🎓</span>
+                                        <span className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"></span>
                                         <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Education</span>
                                     </h2>
                                     <div className="space-y-6">
@@ -385,7 +385,7 @@ export default function About() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid md:grid-cols-3 gap-12 mb-12">
                             <div>
-                                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">Ulya A. ✨</h3>
+                                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text  mb-4">Ulya A. ✨</h3>
                                 <p className="text-slate-400 leading-relaxed mb-6">Fullstack Developer passionate about crafting beautiful, responsive interfaces and diving into data to make experiences smarter and more impactful.</p>
                                 <div className="flex space-x-4">
                                     <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
@@ -456,7 +456,7 @@ export default function About() {
 
                         <div className="border-t border-blue-500/10 pt-8">
                             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                                <p className="text-slate-500 text-sm">© 2024 By Ulya Aulia</p>
+                                <p className="text-slate-500 text-sm">© 2024 By Ulya</p>
                                 <p className="text-slate-500 text-sm flex items-center gap-2">
                                     Made with <span className="text-red-500 animate-pulse">❤️</span> Love u!
                                 </p>
