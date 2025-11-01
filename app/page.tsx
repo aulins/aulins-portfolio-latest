@@ -352,8 +352,8 @@ export default function Home() {
                                         <span className="text-2xl">📧</span>
                                         <div>
                                             <div className="text-sm text-slate-500 mb-1">Email</div>
-                                            <a href="mailto:your@email.com" className="text-slate-300 hover:text-blue-400 transition-colors">
-                                                your@email.com
+                                            <a href="mailto:founder@ainash.my.id" className="text-slate-300 hover:text-blue-400 transition-colors">
+                                                founder@ainash.my.id
                                             </a>
                                         </div>
                                     </li>
@@ -362,7 +362,7 @@ export default function Home() {
                                         <div>
                                             <div className="text-sm text-slate-500 mb-1">Phone</div>
                                             <a href="tel:+62123456789" className="text-slate-300 hover:text-blue-400 transition-colors">
-                                                +62 123 456 789
+                                                +62 822 1526 6070
                                             </a>
                                         </div>
                                     </li>
