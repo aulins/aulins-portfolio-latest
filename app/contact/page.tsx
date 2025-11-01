@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-
+import Navbar from "../components/Navbar";
 export default function Contact() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [formData, setFormData] = useState({
@@ -71,29 +71,6 @@ export default function Contact() {
             </div>
 
             {/* Navigation */}
-            <nav className="fixed top-0 w-full backdrop-blur-md bg-slate-950/80 border-b border-blue-500/20 z-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <div className="flex justify-between items-center">
-                        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                            Portfolio
-                        </Link>
-                        <div className="hidden md:flex space-x-8">
-                            <Link href="/" className="hover:text-blue-400 transition-colors">
-                                Home
-                            </Link>
-                            <Link href="/about" className="hover:text-blue-400 transition-colors">
-                                About
-                            </Link>
-                            <Link href="/projects" className="hover:text-blue-400 transition-colors">
-                                Projects
-                            </Link>
-                            <Link href="/contact" className="text-blue-400">
-                                Contact
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
 
             {/* Content */}
             <div className="relative z-10 pt-32 pb-20 px-4">
