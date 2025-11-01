@@ -21,9 +21,9 @@ export default function Home() {
     ];
 
     const stats = [
-        { label: "Years Experience", value: "2+", icon: "💼" },
-        { label: "Projects Completed", value: "5+", icon: "✅" },
-        { label: "Technologies", value: "10+", icon: "🚀" },
+        { label: "Years Experience", value: "2+", icon: "" },
+        { label: "Projects Completed", value: "5+", icon: "" },
+        { label: "Technologies", value: "10+", icon: "" },
     ];
 
     const services = [
