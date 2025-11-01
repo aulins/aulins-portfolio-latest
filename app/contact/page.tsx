@@ -159,8 +159,8 @@ export default function Contact() {
                         <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-xl p-6 text-center hover:border-blue-500/40 transition-all duration-300">
                             <div className="text-4xl mb-3">📧</div>
                             <h3 className="font-semibold mb-2">Email</h3>
-                            <a href="mailto:your@email.com" className="text-slate-400 hover:text-blue-400 transition-colors">
-                                your@email.com
+                            <a href="mailto:founder@ainash.my.id" className="text-slate-400 hover:text-blue-400 transition-colors">
+                                founder@ainash.my.id
                             </a>
                         </div>
                         <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-xl p-6 text-center hover:border-blue-500/40 transition-all duration-300">
@@ -170,8 +170,8 @@ export default function Contact() {
                                 </svg>
                             </div>
                             <h3 className="font-semibold mb-2">LinkedIn</h3>
-                            <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
-                                /in/yourprofile
+                            <a href="https://linkedin.com/in/auliaintanshafira/" className="text-slate-400 hover:text-blue-400 transition-colors">
+                                /in/auliaintanshafira
                             </a>
                         </div>
                         <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-xl p-6 text-center hover:border-blue-500/40 transition-all duration-300">
@@ -182,8 +182,8 @@ export default function Contact() {
                             </div>
 
                             <h3 className="font-semibold mb-2">GitHub</h3>
-                            <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
-                                /yourusername
+                            <a href="https://github.com/aulins" className="text-slate-400 hover:text-blue-400 transition-colors">
+                                /aulins
                             </a>
                         </div>
                     </div>
