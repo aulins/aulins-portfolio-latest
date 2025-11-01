@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -127,32 +128,8 @@ export default function Home() {
                 {/* Grid Pattern */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(30,58,138,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(30,58,138,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
             </div>
-
             {/* Navigation */}
-            <nav className="fixed top-0 w-full backdrop-blur-md bg-slate-950/80 border-b border-blue-500/20 z-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <div className="flex justify-between items-center">
-                        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent animate-shimmer">
-                            Portfolio
-                        </Link>
-                        <div className="hidden md:flex space-x-8">
-                            <Link href="/" className="text-blue-400">
-                                Home
-                            </Link>
-                            <Link href="/about" className="hover:text-blue-400 transition-colors">
-                                Meet Me
-                            </Link>
-                            <Link href="/projects" className="hover:text-blue-400 transition-colors">
-                                Projects
-                            </Link>
-                            <Link href="/contact" className="hover:text-blue-400 transition-colors">
-                                Get in Touch
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
+            <Navbar />
             <div className="relative z-10">
                 {/* Hero Section */}
                 <section className="min-h-screen flex items-center justify-center px-4 pt-20">
@@ -392,7 +369,6 @@ export default function Home() {
                     <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
                 </footer>
             </div>
-
             <style jsx>{`
                 @keyframes float {
                     0%,
