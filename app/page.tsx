@@ -343,7 +343,6 @@ export default function Home() {
                             </div>
 
                             {/* Contact Info Column */}
-                            {/* Contact Info Column */}
                             <div>
                                 <h4 className="font-semibold text-lg mb-4 text-blue-400">Contact Info</h4>
                                 <ul className="space-y-4">
