@@ -333,10 +333,18 @@ export default function About() {
                                 </div>
                                 <div className="grid grid-cols-2 gap-4">
                                     {/* Placeholder for flower images - replace with actual images */}
-                                    <div className="aspect-square bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center text-6xl">🌹</div>
-                                    <div className="aspect-square bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center text-6xl">🌸</div>
-                                    <div className="aspect-square bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-6xl">💐</div>
-                                    <div className="aspect-square bg-gradient-to-br from-pink-500 to-red-500 rounded-2xl flex items-center justify-center text-6xl">🌷</div>
+                                    <div className="aspect-square bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center text-6xl">
+                                        <img src="flower1.jpeg" alt="flower 1" />
+                                    </div>
+                                    <div className="aspect-square bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center text-6xl">
+                                        <img src="flower2.jpeg" alt="flower 2" />
+                                    </div>
+                                    <div className="aspect-square bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-6xl">
+                                        <img src="flower3.jpg" alt="flower 3" />
+                                    </div>
+                                    <div className="aspect-square bg-gradient-to-br from-pink-500 to-red-500 rounded-2xl flex items-center justify-center text-6xl">
+                                        <img src="flower4.jpeg" alt="flower 4" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
