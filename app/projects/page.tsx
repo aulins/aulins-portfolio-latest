@@ -59,29 +59,7 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(30,58,138,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(30,58,138,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
             </div>
 
-            <nav className="fixed top-0 w-full backdrop-blur-md bg-slate-950/80 border-b border-blue-500/20 z-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <div className="flex justify-between items-center">
-                        <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                            Portfolio
-                        </Link>
-                        <div className="hidden md:flex space-x-8">
-                            <Link href="/" className="hover:text-blue-400 transition-colors">
-                                Home
-                            </Link>
-                            <Link href="/about" className="hover:text-blue-400 transition-colors">
-                                About
-                            </Link>
-                            <Link href="/projects" className="text-blue-400">
-                                Projects
-                            </Link>
-                            <Link href="/contact" className="hover:text-blue-400 transition-colors">
-                                Contact
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
 
             <div className="relative z-10 pt-32 pb-20 px-4">
                 <div className="max-w-6xl mx-auto">
@@ -133,7 +111,6 @@ export default function Projects() {
                         ))}
                     </div>
                     {/* navigation */}
-                    <Navbar />
 
                     <div className="mt-20 text-center backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-12">
                         <h2 className="text-3xl font-bold mb-4">
