@@ -205,7 +205,7 @@ export default function About() {
                                 <div className="sticky top-32">
                                     <div className="relative inline-block">
                                         <img src="/fullbody.png" alt="Full Body Photo" className="w-full max-w-md mx-auto rounded-3xl shadow-2xl shadow-blue-500/30 border-4 border-blue-500/20" />
-                                        <div className="absolute -top-4 -right-4 text-3xl animate-spin-slow">✨</div>
+                                        <div className="absolute -top-4 -right-4 text-3xl animate-spin-slow">𓇼</div>
                                         <div className="absolute -bottom-4 -left-4 text-2xl animate-bounce-slow">✧</div>
                                     </div>
                                 </div>
@@ -349,6 +349,7 @@ export default function About() {
                 </section>
 
                 {/* Part-time Teaching Assistant */}
+                {/* Part-time Teaching Assistant */}
                 <section className="py-20 px-4">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-4xl font-bold mb-6 text-center">
@@ -361,80 +362,122 @@ export default function About() {
 
                         <div className="grid lg:grid-cols-2 gap-10 items-start">
                             {/* Description */}
-                            <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 lg:p-8 hover:border-blue-500/50 transition">
-                                <h3 className="text-2xl font-bold mb-4 text-blue-400">What I did</h3>
-                                <ul className="space-y-3 text-slate-300">
-                                    <li className="flex gap-3">
-                                        <span className="mt-0.5 text-blue-400">
-                                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                            <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 lg:p-8 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
+                                <h3 className="text-2xl font-bold mb-6 text-blue-400 flex items-center gap-3">
+                                    <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
+                                        />
+                                    </svg>
+                                    What I Did
+                                </h3>
+                                <ul className="space-y-4 text-slate-300">
+                                    <li className="flex gap-3 items-start group">
+                                        <span className="mt-1 text-blue-400 group-hover:scale-110 transition-transform">
+                                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d="M20 6L9 17l-5-5" />
                                             </svg>
                                         </span>
-                                        Teaching and facilitating weekly practicum classes (intro, demo, mentoring).
+                                        <span className="leading-relaxed">Teaching and facilitating weekly practicum classes (intro, demo, mentoring).</span>
                                     </li>
-                                    <li className="flex gap-3">
-                                        <span className="mt-0.5 text-blue-400">
-                                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                    <li className="flex gap-3 items-start group">
+                                        <span className="mt-1 text-blue-400 group-hover:scale-110 transition-transform">
+                                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                 <rect x="3" y="4" width="18" height="16" rx="2" />
                                                 <path d="M7 8h10M7 12h6" />
                                             </svg>
                                         </span>
-                                        Designing teaching materials: slides, lab sheets, and coding exercises.
+                                        <span className="leading-relaxed">Designing teaching materials: slides, lab sheets, and coding exercises.</span>
                                     </li>
-                                    <li className="flex gap-3">
-                                        <span className="mt-0.5 text-blue-400">
-                                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                    <li className="flex gap-3 items-start group">
+                                        <span className="mt-1 text-blue-400 group-hover:scale-110 transition-transform">
+                                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d="M9 11l3 3L22 4" />
                                                 <path d="M21 12v7a2 2 0 0 1-2 2H5l-2-2V5a2 2 0 0 1 2-2h11" />
                                             </svg>
                                         </span>
-                                        Creating rubrics, grading assignments, and recapping scores efficiently.
+                                        <span className="leading-relaxed">Creating rubrics, grading assignments, and recapping scores efficiently.</span>
                                     </li>
-                                    <li className="flex gap-3">
-                                        <span className="mt-0.5 text-blue-400">
-                                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                    <li className="flex gap-3 items-start group">
+                                        <span className="mt-1 text-blue-400 group-hover:scale-110 transition-transform">
+                                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d="M8 6h13M8 12h13M8 18h13" />
                                                 <path d="M3 6h.01M3 12h.01M3 18h.01" />
                                             </svg>
                                         </span>
-                                        Coordinating lab schedules and helping students debug during sessions.
+                                        <span className="leading-relaxed">Coordinating lab schedules and helping students debug during sessions.</span>
                                     </li>
                                 </ul>
+
+                                {/* Duration Badge */}
+                                <div className="mt-6 pt-6 border-t border-blue-500/20">
+                                    <div className="flex items-center gap-2 text-slate-400">
+                                        <svg className="w-5 h-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M12 6v6l4 2" />
+                                        </svg>
+                                        <span className="text-sm">2022 - Present</span>
+                                    </div>
+                                </div>
                             </div>
 
-                            {/* Photo Collage */}
-                            <div className="mx-auto max-w-xl sm:max-w-2xl lg:max-w-3xl">
+                            {/* Photo Collage with Glass Blur Effect */}
+                            <div className="w-full">
                                 <div className="grid grid-cols-6 gap-3">
-                                    <div className="group relative col-span-6 sm:col-span-3 rounded-2xl overflow-hidden">
-                                        <img src="/lab1.jpeg" alt="Lab teaching 1" className="w-full h-full object-cover" />
-                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                    {/* Large Photo 1 */}
+                                    <div className="col-span-6 sm:col-span-3 aspect-[4/3] rounded-2xl overflow-hidden relative group">
+                                        <img src="/lab1.jpeg" alt="Lab teaching session" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                        {/* Glass Blur Overlay */}
+                                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-transparent to-slate-900/40 backdrop-blur-[2px] transition-all duration-300 group-hover:backdrop-blur-[1px]" />
+                                        {/* Border Ring */}
+                                        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
                                     </div>
 
-                                    <div className="group relative col-span-6 sm:col-span-3 rounded-2xl overflow-hidden">
-                                        <img src="/lab2.jpeg" alt="Lab teaching 2" className="w-full h-full object-cover" />
-                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                    {/* Large Photo 2 */}
+                                    <div className="col-span-6 sm:col-span-3 aspect-[4/3] rounded-2xl overflow-hidden relative group">
+                                        <img src="/lab2.jpeg" alt="Teaching materials preparation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-transparent to-slate-900/40 backdrop-blur-[2px] transition-all duration-300 group-hover:backdrop-blur-[1px]" />
+                                        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
                                     </div>
 
-                                    <div className="group relative col-span-3 sm:col-span-2 rounded-2xl overflow-hidden">
-                                        <img src="/lab3.jpeg" alt="Lab mentoring" className="w-full h-full object-cover" />
-                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                    {/* Medium Photo 1 */}
+                                    <div className="col-span-3 sm:col-span-2 aspect-square rounded-2xl overflow-hidden relative group">
+                                        <img src="/lab3.jpeg" alt="Student mentoring" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-transparent to-slate-900/40 backdrop-blur-[2px] transition-all duration-300 group-hover:backdrop-blur-[1px]" />
+                                        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
                                     </div>
 
-                                    <div className="group relative col-span-3 sm:col-span-2 rounded-2xl overflow-hidden">
-                                        <img src="/lab4.jpeg" alt="Material prep" className="w-full h-full object-cover" />
-                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                    {/* Medium Photo 2 */}
+                                    <div className="col-span-3 sm:col-span-2 aspect-square rounded-2xl overflow-hidden relative group">
+                                        <img src="/lab4.jpeg" alt="Lab coordination" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-transparent to-slate-900/40 backdrop-blur-[2px] transition-all duration-300 group-hover:backdrop-blur-[1px]" />
+                                        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
                                     </div>
 
-                                    <div className="group relative col-span-6 sm:col-span-2 rounded-2xl overflow-hidden">
-                                        <img src="/lab5.jpeg" alt="Lab coordination" className="w-full h-full object-cover" />
-                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                    {/* Small Photo */}
+                                    <div className="col-span-6 sm:col-span-2 aspect-square rounded-2xl overflow-hidden relative group">
+                                        <img src="/lab5.jpeg" alt="Grading sessions" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-transparent to-slate-900/40 backdrop-blur-[2px] transition-all duration-300 group-hover:backdrop-blur-[1px]" />
+                                        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
                                     </div>
+                                </div>
+
+                                {/* Privacy Note */}
+                                <div className="mt-4 flex items-center gap-2 text-xs text-slate-500 justify-center">
+                                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                        <path d="M7 11V7a5 5 0 0110 0v4" />
+                                    </svg>
+                                    <span>Photos are slightly blurred for privacy</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
                 {/* Outside of Work / Florist Section */}
                 <section className="py-20 px-4 bg-slate-900/30">
                     <div className="max-w-6xl mx-auto">
@@ -679,6 +722,12 @@ export default function About() {
                 }
                 .hide-scrollbar::-webkit-scrollbar {
                     display: none;
+                }
+                /* Smooth blur transition on hover */
+                @media (hover: hover) {
+                    .group:hover .backdrop-blur-\[2px\] {
+                        backdrop-filter: blur(1px);
+                    }
                 }
             `}</style>
         </div>
