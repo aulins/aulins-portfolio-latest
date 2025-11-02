@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 
@@ -113,6 +115,48 @@ export default function Home() {
         return () => window.removeEventListener("mousemove", handleMouseMove);
     }, []);
 
+    // animasi carousel
+    const scrollerRef = useRef<HTMLDivElement | null>(null);
+    const [paused, setPaused] = useState(false);
+
+    useEffect(() => {
+        const el = scrollerRef.current;
+        if (!el) return;
+
+        let rafId: number;
+        let isDragging = false;
+        const speed = 0.6; // px per frame (atur sesuai selera)
+
+        const tick = () => {
+            if (!paused && !isDragging) {
+                el.scrollLeft += speed;
+
+                // Loop mulus: konten diduplikasi 2×
+                const half = el.scrollWidth / 2;
+                if (el.scrollLeft >= half) el.scrollLeft -= half;
+            }
+            rafId = requestAnimationFrame(tick);
+        };
+
+        // pause saat drag
+        const onPointerDown = () => {
+            isDragging = true;
+        };
+        const onPointerUp = () => {
+            isDragging = false;
+        };
+
+        el.addEventListener("pointerdown", onPointerDown);
+        window.addEventListener("pointerup", onPointerUp);
+
+        rafId = requestAnimationFrame(tick);
+        return () => {
+            cancelAnimationFrame(rafId);
+            el.removeEventListener("pointerdown", onPointerDown);
+            window.removeEventListener("pointerup", onPointerUp);
+        };
+    }, [paused]);
+
     return (
         <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
             {/* Animated Background with Stars */}
@@ -204,13 +248,24 @@ export default function Home() {
                         <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">Tools and technologies I use to build amazing projects</p>
 
                         <div className="relative overflow-hidden">
-                            <div className="carousel">
-                                {/* Mobile: swipe scroll; Desktop: marquee (md:animate-scroll) */}
-                                <div className="flex gap-2 sm:gap-4 will-change-transform overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none md:animate-scroll hide-scrollbar" style={{ WebkitOverflowScrolling: "touch" }}>
+                            {/* Container bisa swipe; auto-scroll via JS */}
+                            <div
+                                ref={scrollerRef}
+                                className="hide-scrollbar overflow-x-auto"
+                                style={{ WebkitOverflowScrolling: "touch" }}
+                                onMouseEnter={() => setPaused(true)}
+                                onMouseLeave={() => setPaused(false)}
+                                onTouchStart={() => setPaused(true)}
+                                onTouchEnd={() => setPaused(false)}
+                                onFocus={() => setPaused(true)}
+                                onBlur={() => setPaused(false)}
+                            >
+                                {/* Track: duplikasi 2× untuk loop mulus */}
+                                <div className="flex gap-2 sm:gap-4">
                                     {[...technologies, ...technologies].map((tech, index) => (
                                         <div
                                             key={index}
-                                            className="flex-none basis-[19%] sm:basis-28 md:basis-32 snap-start backdrop-blur-md bg-slate-900/50 border border-blue-500/0 rounded-2xl p-3 sm:p-4 md:p-6 text-center hover:border-blue-500/60 transition-all duration-300 hover:scale-100 hover:shadow-xl hover:shadow-blue-500/20"
+                                            className="flex-none basis-[19%] sm:basis-28 md:basis-32 snap-start backdrop-blur-md bg-slate-900/50 border border-blue-500/0 rounded-2xl p-3 sm:p-4 md:p-6 text-center hover:border-blue-500/60 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20"
                                         >
                                             <img src={tech.icon} alt={tech.name} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 object-contain" loading="lazy" />
                                             <div className="text-[10px] sm:text-xs md:text-sm font-semibold text-slate-300">{tech.name}</div>
