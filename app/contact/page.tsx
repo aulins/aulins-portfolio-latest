@@ -171,7 +171,7 @@ export default function Contact() {
                     <h1 className="text-5xl md:text-6xl font-bold mb-6 text-center">
                         <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Get In Touch</span>
                     </h1>
-                    <p className="text-center text-slate-400 text-lg mb-12 max-w-2xl mx-auto">Have a question or want to work together? Drop me a message and I'll get back to you as soon as possible!</p>
+                    <p className="text-center text-slate-400 text-lg mb-12 max-w-2xl mx-auto">Have a question or want to work together? Drop me a message and I&apos;ll get back to you as soon as possible!</p>
 
                     {/* Availability Badge */}
                     <div className="mb-12 flex justify-center">
