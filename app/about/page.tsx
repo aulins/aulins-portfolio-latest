@@ -327,9 +327,6 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-
-                        {/* hint kecil optional */}
-                        <p className="mt-6 text-center text-xs text-slate-500">Auto-scroll berjalan; geser untuk menelusuri sertifikat secara manual.</p>
                     </div>
                 </section>
 
