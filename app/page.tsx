@@ -7,18 +7,35 @@ import Navbar from "./components/Navbar";
 export default function Home() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-    // Data teknologi
     const technologies = [
-        { name: "Python", icon: "🐍", color: "from-yellow-400 to-blue-500" },
-        { name: "CodeIgniter", icon: "🔥", color: "from-red-500 to-orange-500" },
-        { name: "SQL", icon: "🗄️", color: "from-blue-400 to-cyan-500" },
-        { name: "REST API", icon: "🔌", color: "from-green-400 to-emerald-500" },
-        { name: "TensorFlow", icon: "🧠", color: "from-orange-400 to-red-500" },
-        { name: "Pandas", icon: "🐼", color: "from-blue-400 to-indigo-500" },
-        { name: "Grafana", icon: "📊", color: "from-orange-500 to-red-600" },
-        { name: "Prometheus", icon: "📈", color: "from-red-500 to-pink-500" },
-        { name: "Linux", icon: "🐧", color: "from-yellow-400 to-orange-500" },
-        { name: "Figma", icon: "🎨", color: "from-purple-400 to-pink-500" },
+        { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+        { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+        { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+        { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
+        { name: "Canva", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" },
+        { name: "CodeIgniter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" },
+        { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+        { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+        { name: "Flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
+        { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+        { name: "Grafana", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original.svg" },
+        { name: "Illustrator", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
+        { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+        { name: "Nginx", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" },
+        { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+        { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+        { name: "Prometheus", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prometheus/prometheus-original.svg" },
+        { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+        { name: "Bash", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" },
+        { name: "Kaggle", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg" },
+        { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { name: "Notion", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg" },
+        { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+        { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+        { name: "Ubuntu", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" },
+        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
     ];
 
     const stats = [
@@ -53,23 +70,23 @@ export default function Home() {
     const latestProjects = [
         {
             title: "Batik Image Classification",
-            description: "Full-stack online store with payment integration",
-            tech: ["Next.js", "Stripe", "PostgreSQL"],
-            image: <img src="/skripsi.png" alt="image classification" />,
+            description: "Machine learning model for batik pattern classification",
+            tech: ["Python", "TensorFlow", "CNN"],
+            image: "/skripsi.png",
             year: "2025",
         },
         {
             title: "Analytics Dashboard",
             description: "Real-time data visualization with Grafana",
             tech: ["Python", "Grafana", "Prometheus"],
-            image: <img src="/dashboard.png" alt="dashboard" />,
+            image: "/dashboard.png",
             year: "2025",
         },
         {
             title: "ML Prediction Model",
             description: "Machine learning model for sales forecasting",
             tech: ["Python", "TensorFlow", "Pandas"],
-            image: <img src="/prediksi.png" alt="prediksi" />,
+            image: "/prediksi.png",
             year: "2025",
         },
     ];
@@ -175,26 +192,33 @@ export default function Home() {
                     </div>
                 </section>
 
-                {/* Technologies Section */}
-                <section className="py-20 px-4 bg-slate-900/30">
+                {/* Technologies Carousel Section */}
+                <section className="py-20 px-4 bg-slate-900/30 overflow-hidden">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-4xl font-bold mb-6 text-center">
                             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                                Technologies I <span className="text-red-500 animate-pulse">💙</span>
+                                Technologies I <span className="text-blue-500">💙</span>
                             </span>
                         </h2>
                         <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">Tools and technologies I use to build amazing projects</p>
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-                            {technologies.map((tech, index) => (
-                                <div
-                                    key={index}
-                                    className="group backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 text-center hover:border-blue-500/60 transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-blue-500/20 relative overflow-hidden"
-                                >
-                                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-                                    <div className={``}>{tech.icon}</div>
-                                    <div className="text-sm font-semibold group-hover:text-blue-400 transition-colors">{tech.name}</div>
+
+                        {/* wrapper overflow-hidden sudah benar */}
+                        <div className="relative overflow-hidden">
+                            {/* tambahkan class penanda utk pause-on-hover (opsional) */}
+                            <div className="carousel">
+                                {/* track yang bergerak: duplikasi array 2x */}
+                                <div className="flex gap-4 animate-scroll will-change-transform">
+                                    {[...technologies, ...technologies].map((tech, index) => (
+                                        <div
+                                            key={index}
+                                            className="flex-shrink-0 w-32 mx-4 backdrop-blur-md bg-slate-900/50 border border-blue-500/0 rounded-2xl p-6 text-center hover:border-blue-500/60 transition-all duration-300 hover:scale-100 hover:shadow-xl hover:shadow-blue-500/20"
+                                        >
+                                            <img src={tech.icon} alt={tech.name} className="w-12 h-12 mx-auto mb-3" />
+                                            <div className="text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">{tech.name}</div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -227,7 +251,6 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-
                 {/* Latest Work Section */}
                 <section className="py-20 px-4 bg-slate-900/30">
                     <div className="max-w-6xl mx-auto">
@@ -238,9 +261,9 @@ export default function Home() {
                         <div className="grid md:grid-cols-3 gap-8 mb-12">
                             {latestProjects.map((project, index) => (
                                 <div key={index} className="group backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl overflow-hidden hover:border-blue-500/60 transition-all duration-300 hover:scale-105">
-                                    <div className="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-8xl relative overflow-hidden">
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
-                                        <span className="relative z-10">{project.image}</span>
+                                    <div className="h-48 relative overflow-hidden bg-slate-800">
+                                        <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
                                     </div>
                                     <div className="p-6">
                                         <div className="flex justify-between items-start mb-3">
@@ -473,6 +496,30 @@ export default function Home() {
                 }
                 .animate-bounce-slow {
                     animation: bounce-slow 2s ease-in-out infinite;
+                }
+                /* Gerakkan track ke kiri sejauh 50% (karena item diduplikasi 2×) */
+                @keyframes scroll-x {
+                    0% {
+                        transform: translate3d(0, 0, 0);
+                    }
+                    100% {
+                        transform: translate3d(-50%, 0, 0);
+                    }
+                }
+                .animate-scroll {
+                    animation: scroll-x 25s linear infinite;
+                }
+
+                /* Pause saat hover/focus di area carousel */
+                .carousel:is(:hover, :focus-within) .animate-scroll {
+                    animation-play-state: paused !important;
+                }
+
+                /* Prefer-reduced-motion */
+                @media (prefers-reduced-motion: reduce) {
+                    .animate-scroll {
+                        animation: none;
+                    }
                 }
             `}</style>
         </div>
