@@ -6,6 +6,27 @@ import Navbar from "../components/Navbar";
 
 export default function About() {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+
+        const handleMouseMove = (e: MouseEvent) => {
+            setMousePosition({ x: e.clientX, y: e.clientY });
+        };
+
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, []);
+
+    // Kemudian di render:
+    <div
+        className="absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl transition-all duration-1000"
+        style={{
+            top: mounted ? `${mousePosition.y / 10}px` : "0px",
+            left: mounted ? `${mousePosition.x / 10}px` : "0px",
+        }}
+    />;
 
     // Education Data
     const education = [
@@ -430,10 +451,8 @@ export default function About() {
                                 <div className="grid grid-cols-6 gap-3">
                                     {/* Large Photo 1 */}
                                     <div className="col-span-6 sm:col-span-3 aspect-[4/3] rounded-2xl overflow-hidden relative group">
-                                        <img src="/lab1.jpeg" alt="Lab teaching session" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                                        {/* Glass Blur Overlay */}
-                                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/20 via-transparent to-slate-900/40 backdrop-blur-[2px] transition-all duration-300 group-hover:backdrop-blur-[1px]" />
-                                        {/* Border Ring */}
+                                        <img src="/lab1.jpeg" alt="Teaching materials preparation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/10 via-transparent to-slate-900/30" />
                                         <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
                                     </div>
 
