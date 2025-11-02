@@ -39,7 +39,7 @@ export default function Navbar() {
                     {/* Mobile Hamburger Button */}
                     <button onClick={toggleMenu} className="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none group" aria-label="Toggle menu">
                         <span className={`w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
-                        <span className={`w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isOpen ? "opacity-50" : "opacity-50"}`} />
+                        <span className={`w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isOpen ? "opacity-0" : "opacity-100"}`} />
                         <span className={`w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
                     </button>
                 </div>
@@ -49,11 +49,7 @@ export default function Navbar() {
             {isOpen && <div className="fixed inset-0 bg-slate-950/90 backdrop-blur-sm z-40 md:hidden" onClick={closeMenu} />}
 
             {/* Mobile Menu */}
-            <div
-                className={`fixed top-0 right-0 h-full w-72 bg-slate-900/95 backdrop-blur-md z-50 border-l border-blue-500/30 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
-                    isOpen ? "translate-x-0" : "translate-x-full"
-                }`}
-            >
+            <div className={`fixed top-0 right-0 h-full w-72 bg-slate-950 z-50 border-l border-blue-500/30 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
                 <div className="flex flex-col p-8 pt-24 space-y-6">
                     {navLinks.map((link) => (
                         <Link key={link.href} href={link.href} onClick={closeMenu} className={`text-xl font-semibold transition-colors ${pathname === link.href ? "text-blue-400" : "text-slate-300 hover:text-blue-400"}`}>
