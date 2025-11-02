@@ -39,14 +39,14 @@ export default function Navbar() {
                     {/* Mobile Hamburger Button */}
                     <button onClick={toggleMenu} className="md:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none group" aria-label="Toggle menu">
                         <span className={`w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
-                        <span className={`w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isOpen ? "opacity-50" : "opacity-50"}`} />
+                        <span className={`w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isOpen ? "opacity-0" : "opacity-100"}`} />
                         <span className={`w-6 h-0.5 bg-blue-400 transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
                     </button>
                 </div>
             </div>
 
             {/* Mobile Menu Overlay */}
-            {isOpen && <div className="fixed inset-0 bg-slate-950/90 backdrop-blur-sm z-40 md:hidden" onClick={closeMenu} />}
+            {isOpen && <div className="fixed inset-0 bg-slate-950/95 backdrop-blur-md z-40 md:hidden" onClick={closeMenu} />}
 
             {/* Mobile Menu */}
             <div
