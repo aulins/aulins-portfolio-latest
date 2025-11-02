@@ -257,7 +257,7 @@ export default function Projects() {
                         <h2 className="text-3xl font-bold mb-4">
                             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Have a project in mind?</span>
                         </h2>
-                        <p className="text-slate-400 text-lg mb-8">Let's collaborate and bring your ideas to life!</p>
+                        <p className="text-slate-400 text-lg mb-8">Let&apos;s collaborate and bring your ideas to life!</p>
                         <Link href="/contact" className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
                             Get In Touch
                         </Link>
