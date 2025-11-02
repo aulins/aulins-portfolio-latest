@@ -204,17 +204,15 @@ export default function Home() {
 
                         {/* wrapper overflow-hidden sudah benar */}
                         <div className="relative overflow-hidden">
-                            {/* tambahkan class penanda utk pause-on-hover (opsional) */}
                             <div className="carousel">
-                                {/* track yang bergerak: duplikasi array 2x */}
-                                <div className="flex gap-4 animate-scroll will-change-transform">
+                                <div className="flex gap-2 sm:gap-4 animate-scroll will-change-transform">
                                     {[...technologies, ...technologies].map((tech, index) => (
                                         <div
                                             key={index}
-                                            className="flex-shrink-0 w-32 mx-4 backdrop-blur-md bg-slate-900/50 border border-blue-500/0 rounded-2xl p-6 text-center hover:border-blue-500/60 transition-all duration-300 hover:scale-100 hover:shadow-xl hover:shadow-blue-500/20"
+                                            className="flex-none basis-[calc(20%_-_0.25rem)] sm:basis-28 md:basis-32 backdrop-blur-md bg-slate-900/50 border border-blue-500/0 rounded-2xl p-3 sm:p-4 md:p-6 text-center hover:border-blue-500/60 transition-all duration-300 hover:scale-100 hover:shadow-xl hover:shadow-blue-500/20"
                                         >
-                                            <img src={tech.icon} alt={tech.name} className="w-12 h-12 mx-auto mb-3" />
-                                            <div className="text-sm font-semibold text-slate-300 group-hover:text-blue-400 transition-colors">{tech.name}</div>
+                                            <img src={tech.icon} alt={tech.name} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 object-contain" loading="lazy" />
+                                            <div className="text-[10px] sm:text-xs md:text-sm font-semibold text-slate-300">{tech.name}</div>
                                         </div>
                                     ))}
                                 </div>
@@ -497,25 +495,30 @@ export default function Home() {
                 .animate-bounce-slow {
                     animation: bounce-slow 2s ease-in-out infinite;
                 }
-                /* Gerakkan track ke kiri sejauh 50% (karena item diduplikasi 2×) */
                 @keyframes scroll-x {
                     0% {
                         transform: translate3d(0, 0, 0);
                     }
                     100% {
                         transform: translate3d(-50%, 0, 0);
-                    }
+                    } /* konten diduplikasi 2x */
                 }
                 .animate-scroll {
                     animation: scroll-x 25s linear infinite;
                 }
 
-                /* Pause saat hover/focus di area carousel */
+                /* Lebihin durasi di layar kecil supaya mudah dibaca */
+                @media (max-width: 640px) {
+                    .animate-scroll {
+                        animation-duration: 35s;
+                    }
+                }
+
+                /* Pause saat hover/focus (efektif di desktop) */
                 .carousel:is(:hover, :focus-within) .animate-scroll {
                     animation-play-state: paused !important;
                 }
 
-                /* Prefer-reduced-motion */
                 @media (prefers-reduced-motion: reduce) {
                     .animate-scroll {
                         animation: none;

@@ -491,7 +491,7 @@ export default function About() {
 
                         <div className="border-t border-blue-500/10 pt-8">
                             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                                <p className="text-slate-500 text-sm">© 2024 By Ulya</p>
+                                <p className="text-slate-500 text-sm">© 2025 By Ulya A.</p>
                                 <p className="text-slate-500 text-sm flex items-center gap-2">
                                     Made with <span className="text-red-500 animate-pulse">💙</span> Love u!
                                 </p>
