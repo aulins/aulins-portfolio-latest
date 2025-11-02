@@ -193,6 +193,7 @@ export default function Home() {
                 </section>
 
                 {/* Technologies Carousel Section */}
+                {/* Technologies Carousel Section */}
                 <section className="py-20 px-4 bg-slate-900/30 overflow-hidden">
                     <div className="max-w-6xl mx-auto">
                         <h2 className="text-4xl font-bold mb-6 text-center">
@@ -202,14 +203,14 @@ export default function Home() {
                         </h2>
                         <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">Tools and technologies I use to build amazing projects</p>
 
-                        {/* wrapper overflow-hidden sudah benar */}
                         <div className="relative overflow-hidden">
                             <div className="carousel">
-                                <div className="flex gap-2 sm:gap-4 animate-scroll will-change-transform">
+                                {/* Mobile: swipe scroll; Desktop: marquee (md:animate-scroll) */}
+                                <div className="flex gap-2 sm:gap-4 will-change-transform overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none md:animate-scroll hide-scrollbar" style={{ WebkitOverflowScrolling: "touch" }}>
                                     {[...technologies, ...technologies].map((tech, index) => (
                                         <div
                                             key={index}
-                                            className="flex-none basis-[calc(20%_-_0.25rem)] sm:basis-28 md:basis-32 backdrop-blur-md bg-slate-900/50 border border-blue-500/0 rounded-2xl p-3 sm:p-4 md:p-6 text-center hover:border-blue-500/60 transition-all duration-300 hover:scale-100 hover:shadow-xl hover:shadow-blue-500/20"
+                                            className="flex-none basis-[19%] sm:basis-28 md:basis-32 snap-start backdrop-blur-md bg-slate-900/50 border border-blue-500/0 rounded-2xl p-3 sm:p-4 md:p-6 text-center hover:border-blue-500/60 transition-all duration-300 hover:scale-100 hover:shadow-xl hover:shadow-blue-500/20"
                                         >
                                             <img src={tech.icon} alt={tech.name} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto mb-2 md:mb-3 object-contain" loading="lazy" />
                                             <div className="text-[10px] sm:text-xs md:text-sm font-semibold text-slate-300">{tech.name}</div>
@@ -507,16 +508,35 @@ export default function Home() {
                     animation: scroll-x 25s linear infinite;
                 }
 
-                /* Lebihin durasi di layar kecil supaya mudah dibaca */
+                /* Infinite marquee halus (desktop) */
+                @keyframes scroll-x {
+                    0% {
+                        transform: translate3d(0, 0, 0);
+                    }
+                    100% {
+                        transform: translate3d(-50%, 0, 0);
+                    } /* karena konten diduplikasi 2x */
+                }
+                .animate-scroll {
+                    animation: scroll-x 25s linear infinite;
+                }
                 @media (max-width: 640px) {
                     .animate-scroll {
                         animation-duration: 35s;
-                    }
+                    } /* jaga-jaga bila kepakai di mobile */
                 }
 
-                /* Pause saat hover/focus (efektif di desktop) */
-                .carousel:is(:hover, :focus-within) .animate-scroll {
+                /* Pause saat hover/focus/drag (desktop) */
+                .carousel:is(:hover, :focus-within, :active) .animate-scroll {
                     animation-play-state: paused !important;
+                }
+
+                /* Sembunyikan scrollbar (mobile & desktop) */
+                .hide-scrollbar {
+                    scrollbar-width: none;
+                }
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
                 }
 
                 @media (prefers-reduced-motion: reduce) {
