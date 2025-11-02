@@ -46,11 +46,11 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Overlay */}
-            {isOpen && <div className="fixed inset-0 bg-slate-950/95 backdrop-blur-md z-40 md:hidden" onClick={closeMenu} />}
+            {isOpen && <div className="fixed inset-0 bg-slate-950/90 backdrop-blur-sm z-40 md:hidden" onClick={closeMenu} />}
 
             {/* Mobile Menu */}
             <div
-                className={`fixed top-0 right-0 h-full w-72 bg-slate-900/98 backdrop-blur-md border-l border-blue-500/30 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
+                className={`fixed top-0 right-0 h-full w-72 bg-slate-900/95 backdrop-blur-md z-50 border-l border-blue-500/30 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
                     isOpen ? "translate-x-0" : "translate-x-full"
                 }`}
             >
