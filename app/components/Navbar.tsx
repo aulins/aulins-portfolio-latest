@@ -13,9 +13,9 @@ export default function Navbar() {
 
     const navLinks = [
         { href: "/", label: "Home" },
-        { href: "/about", label: "Meet Me" },
+        { href: "/about", label: "About" },
         { href: "/projects", label: "Projects" },
-        { href: "/contact", label: "Get in Touch" },
+        { href: "/contact", label: "Contact" },
     ];
 
     return (
@@ -24,7 +24,7 @@ export default function Navbar() {
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                        ✧˚.🎀⋆
+                        Portfolio
                     </Link>
 
                     {/* Desktop Navigation */}
@@ -48,28 +48,12 @@ export default function Navbar() {
             {/* Mobile Menu Overlay */}
             {isOpen && <div className="fixed inset-0 bg-slate-950/90 backdrop-blur-sm z-40 md:hidden" onClick={closeMenu} />}
 
-            {/* Mobile Menu (SOLID + z-index lebih tinggi + tombol close internal) */}
+            {/* Mobile Menu */}
             <div
-                className={`fixed top-0 right-0 h-full w-72
-    bg-slate-950                    /* solid, bukan /98 */
-    border-l border-blue-500/30 shadow-2xl
-    z-[60]                          /* lebih tinggi dari overlay (z-40) & navbar (z-50) */
-    transform transition-transform duration-300 ease-in-out md:hidden
-    ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+                className={`fixed top-0 right-0 h-full w-72 bg-slate-900/98 backdrop-blur-md border-l border-blue-500/30 shadow-2xl z-40 transform transition-transform duration-300 ease-in-out md:hidden ${
+                    isOpen ? "translate-x-0" : "translate-x-full"
+                }`}
             >
-                {/* Close button di dalam sidebar */}
-                <button
-                    onClick={closeMenu}
-                    aria-label="Close menu"
-                    className="absolute top-5 right-5 w-9 h-9 rounded-full grid place-items-center
-                            text-slate-300 hover:text-white hover:bg-slate-800/80 transition"
-                >
-                    <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="18" y1="6" x2="6" y2="18" />
-                        <line x1="6" y1="6" x2="18" y2="18" />
-                    </svg>
-                </button>
-
                 <div className="flex flex-col p-8 pt-24 space-y-6">
                     {navLinks.map((link) => (
                         <Link key={link.href} href={link.href} onClick={closeMenu} className={`text-xl font-semibold transition-colors ${pathname === link.href ? "text-blue-400" : "text-slate-300 hover:text-blue-400"}`}>
@@ -82,7 +66,7 @@ export default function Navbar() {
                         <p className="text-slate-400 text-sm mb-4 font-medium">Connect</p>
                         <div className="flex space-x-4">
                             <a
-                                href="https://github.com/aulins"
+                                href="https://github.com/yourusername"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-slate-800/80 rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110 group"
@@ -93,7 +77,7 @@ export default function Navbar() {
                                 </svg>
                             </a>
                             <a
-                                href="https://linkedin.com/in/auliaintanshafira/"
+                                href="https://linkedin.com/in/yourusername"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-slate-800/80 rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110 group"
@@ -104,7 +88,7 @@ export default function Navbar() {
                                 </svg>
                             </a>
                             <a
-                                href="https://instagram.com/aulia_intan12/"
+                                href="https://instagram.com/yourusername"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-slate-800/80 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 transition-all duration-300 hover:scale-110 group"
