@@ -77,30 +77,35 @@ export default function About() {
             issuer: "Amazon Web Services",
             year: "2024",
             icon: "☁️",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/", // ganti ke URL sertifikatmu
         },
         {
             title: "TensorFlow Developer Certificate",
             issuer: "Google",
             year: "2023",
             icon: "🧠",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
         },
         {
             title: "Python for Data Science",
             issuer: "IBM",
             year: "2023",
             icon: "🐍",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
         },
         {
             title: "React - The Complete Guide",
             issuer: "Udemy",
             year: "2023",
             icon: "⚛️",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
         },
         {
             title: "Grafana Fundamentals",
             issuer: "Grafana Labs",
             year: "2024",
             icon: "📊",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
         },
     ];
 
@@ -255,13 +260,31 @@ export default function About() {
                         <h2 className="text-4xl font-bold mb-12 text-center">
                             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Certifications</span>
                         </h2>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        {/* kartu lebih kecil & rapat */}
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                             {certifications.map((cert, index) => (
-                                <div key={index} className="group backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/60 hover:scale-105 transition-all duration-300">
-                                    <div className="text-5xl mb-4">{cert.icon}</div>
-                                    <h3 className="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">{cert.title}</h3>
-                                    <p className="text-slate-400 text-sm mb-2">{cert.issuer}</p>
-                                    <p className="text-blue-400 font-semibold text-sm">{cert.year}</p>
+                                <div key={index} className="group backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-xl p-4 hover:border-blue-500/50 transition-all duration-300">
+                                    <h3 className="text-sm font-semibold mb-1 text-slate-200 group-hover:text-blue-400 transition-colors line-clamp-2">{cert.title}</h3>
+                                    <p className="text-[11px] text-slate-400">{cert.issuer}</p>
+
+                                    <div className="mt-3 flex items-center justify-between">
+                                        <span className="text-[11px] font-medium text-blue-400">{cert.year}</span>
+
+                                        {/* tombol/link ke LinkedIn */}
+                                        <a
+                                            href={cert.linkedinUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1 text-[11px] text-slate-300 hover:text-blue-400"
+                                            aria-label={`View ${cert.title} on LinkedIn`}
+                                        >
+                                            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M7 17L17 7M7 7h10v10" />
+                                            </svg>
+                                            View
+                                        </a>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -289,6 +312,98 @@ export default function About() {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Part-time Teaching Assistant */}
+                <section className="py-20 px-4">
+                    <div className="max-w-7xl mx-auto">
+                        <h2 className="text-4xl font-bold mb-6 text-center">
+                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Part-time Teaching Assistant</span>
+                        </h2>
+                        <p className="text-center text-slate-400 mb-12 max-w-3xl mx-auto">
+                            I worked part-time as an assistant in the Informatics Laboratory—teaching lab sessions, preparing learning materials, creating assessment rubrics, assisting students during practicums, and coordinating grading &
+                            recap each semester.
+                        </p>
+
+                        <div className="grid lg:grid-cols-2 gap-10 items-start">
+                            {/* Deskripsi pekerjaan */}
+                            <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 lg:p-8 hover:border-blue-500/50 transition">
+                                <h3 className="text-2xl font-bold mb-4 text-blue-400">What I did</h3>
+                                <ul className="space-y-3 text-slate-300">
+                                    <li className="flex gap-3">
+                                        <span className="mt-0.5 text-blue-400">
+                                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M20 6L9 17l-5-5" />
+                                            </svg>
+                                        </span>
+                                        Teaching and facilitating weekly practicum classes (intro, demo, mentoring).
+                                    </li>
+                                    <li className="flex gap-3">
+                                        <span className="mt-0.5 text-blue-400">
+                                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                                <rect x="3" y="4" width="18" height="16" rx="2" />
+                                                <path d="M7 8h10M7 12h6" />
+                                            </svg>
+                                        </span>
+                                        Designing teaching materials: slides, lab sheets, and coding exercises.
+                                    </li>
+                                    <li className="flex gap-3">
+                                        <span className="mt-0.5 text-blue-400">
+                                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M9 11l3 3L22 4" />
+                                                <path d="M21 12v7a2 2 0 0 1-2 2H5l-2-2V5a2 2 0 0 1 2-2h11" />
+                                            </svg>
+                                        </span>
+                                        Creating rubrics, grading assignments, and recapping scores efficiently.
+                                    </li>
+                                    <li className="flex gap-3">
+                                        <span className="mt-0.5 text-blue-400">
+                                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                                                <path d="M8 6h13M8 12h13M8 18h13" />
+                                                <path d="M3 6h.01M3 12h.01M3 18h.01" />
+                                            </svg>
+                                        </span>
+                                        Coordinating lab schedules and helping students debug during sessions.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* Collage foto aesthetic */}
+                            <div className="mx-auto max-w-xl sm:max-w-2xl lg:max-w-3xl">
+                                <div className="grid grid-cols-6 gap-3">
+                                    <div className="group relative col-span-6 sm:col-span-3 rounded-2xl overflow-hidden">
+                                        <img src="/lab1.jpeg" alt="Lab teaching 1" className="w-full h-full object-cover" />
+                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                        <div className="absolute inset-0 aspect-[4/3]" />
+                                    </div>
+
+                                    <div className="group relative col-span-6 sm:col-span-3 rounded-2xl overflow-hidden">
+                                        <img src="/lab2.jpeg" alt="Lab teaching 2" className="w-full h-full object-cover" />
+                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                        <div className="absolute inset-0 aspect-[3/2]" />
+                                    </div>
+
+                                    <div className="group relative col-span-3 sm:col-span-2 rounded-2xl overflow-hidden">
+                                        <img src="/lab3.jpeg" alt="Lab mentoring" className="w-full h-full object-cover" />
+                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                        <div className="absolute inset-0 aspect-square" />
+                                    </div>
+
+                                    <div className="group relative col-span-3 sm:col-span-2 rounded-2xl overflow-hidden">
+                                        <img src="/lab4.jpeg" alt="Material prep" className="w-full h-full object-cover" />
+                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                        <div className="absolute inset-0 aspect-[3/4]" />
+                                    </div>
+
+                                    <div className="group relative col-span-6 sm:col-span-2 rounded-2xl overflow-hidden">
+                                        <img src="/lab5.jpeg" alt="Lab coordination" className="w-full h-full object-cover" />
+                                        <div className="pointer-events-none absolute inset-0 bg-white/5 md:bg-white/7 ring-1 ring-white/10 backdrop-blur-[1.5px] md:backdrop-blur-sm transition-all duration-300 group-hover:bg-white/8 group-hover:backdrop-blur" />
+                                        <div className="absolute inset-0 aspect-square" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
