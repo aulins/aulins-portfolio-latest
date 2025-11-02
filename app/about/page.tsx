@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 
@@ -136,6 +136,39 @@ export default function About() {
         window.addEventListener("mousemove", handleMouseMove);
         return () => window.removeEventListener("mousemove", handleMouseMove);
     }, []);
+    const certScrollerRef = useRef<HTMLDivElement | null>(null);
+    const [certPaused, setCertPaused] = useState(false);
+
+    useEffect(() => {
+        const el = certScrollerRef.current;
+        if (!el) return;
+
+        let rafId: number;
+        let isDragging = false;
+        const speed = 0.6; // px per frame
+
+        const tick = () => {
+            if (!certPaused && !isDragging) {
+                el.scrollLeft += speed;
+                const half = el.scrollWidth / 2; // konten diduplikasi 2x
+                if (el.scrollLeft >= half) el.scrollLeft -= half;
+            }
+            rafId = requestAnimationFrame(tick);
+        };
+
+        const onPointerDown = () => (isDragging = true);
+        const onPointerUp = () => (isDragging = false);
+
+        el.addEventListener("pointerdown", onPointerDown);
+        window.addEventListener("pointerup", onPointerUp);
+        rafId = requestAnimationFrame(tick);
+
+        return () => {
+            cancelAnimationFrame(rafId);
+            el.removeEventListener("pointerdown", onPointerDown);
+            window.removeEventListener("pointerup", onPointerUp);
+        };
+    }, [certPaused]);
 
     return (
         <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
@@ -261,33 +294,42 @@ export default function About() {
                             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Certifications</span>
                         </h2>
 
-                        {/* kartu lebih kecil & rapat */}
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                            {certifications.map((cert, index) => (
-                                <div key={index} className="group backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-xl p-4 hover:border-blue-500/50 transition-all duration-300">
-                                    <h3 className="text-sm font-semibold mb-1 text-slate-200 group-hover:text-blue-400 transition-colors line-clamp-2">{cert.title}</h3>
-                                    <p className="text-[11px] text-slate-400">{cert.issuer}</p>
-
-                                    <div className="mt-3 flex items-center justify-between">
-                                        <span className="text-[11px] font-medium text-blue-400">{cert.year}</span>
-
-                                        {/* tombol/link ke LinkedIn */}
+                        <div className="relative overflow-hidden">
+                            <div
+                                ref={certScrollerRef}
+                                className="hide-scrollbar overflow-x-auto"
+                                style={{ WebkitOverflowScrolling: "touch" }}
+                                onMouseEnter={() => setCertPaused(true)}
+                                onMouseLeave={() => setCertPaused(false)}
+                                onTouchStart={() => setCertPaused(true)}
+                                onTouchEnd={() => setCertPaused(false)}
+                                onFocus={() => setCertPaused(true)}
+                                onBlur={() => setCertPaused(false)}
+                            >
+                                {/* duplikasi 2x untuk loop mulus */}
+                                <div className="flex gap-3 sm:gap-4">
+                                    {[...certifications, ...certifications].map((cert, idx) => (
                                         <a
-                                            href={cert.linkedinUrl}
+                                            key={idx}
+                                            href={cert.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1 text-[11px] text-slate-300 hover:text-blue-400"
-                                            aria-label={`View ${cert.title} on LinkedIn`}
+                                            className="flex-none basis-[70%] xs:basis-[55%] sm:basis-60 md:basis-64 backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-4 sm:p-5 md:p-6 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                                            aria-label={`Open certificate: ${cert.title}`}
                                         >
-                                            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                                                <path d="M7 17L17 7M7 7h10v10" />
-                                            </svg>
-                                            View
+                                            <div className="w-full">
+                                                <h3 className="text-sm sm:text-base md:text-lg font-bold mb-1 text-slate-100 line-clamp-2">{cert.title}</h3>
+                                                <p className="text-xs sm:text-sm text-slate-400">{cert.issuer}</p>
+                                                <p className="text-xs sm:text-sm text-blue-400 font-semibold mt-1">{cert.year}</p>
+                                            </div>
                                         </a>
-                                    </div>
+                                    ))}
                                 </div>
-                            ))}
+                            </div>
                         </div>
+
+                        {/* hint kecil optional */}
+                        <p className="mt-6 text-center text-xs text-slate-500">Auto-scroll berjalan; geser untuk menelusuri sertifikat secara manual.</p>
                     </div>
                 </section>
 
@@ -654,6 +696,12 @@ export default function About() {
                 }
                 .animate-bounce-slow {
                     animation: bounce-slow 2s ease-in-out infinite;
+                }
+                .hide-scrollbar {
+                    scrollbar-width: none;
+                }
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
                 }
             `}</style>
         </div>
