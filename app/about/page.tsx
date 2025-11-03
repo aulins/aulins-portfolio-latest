@@ -614,60 +614,35 @@ export default function About() {
                             {/* RIGHT COLUMN — Documentation only */}
                             <div className="space-y-6">
                                 <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-4 hover:border-blue-500/50 transition-all duration-300">
-                                    <h4 className="text-sm font-semibold text-slate-400 mb-3 flex items-center gap-2">
-                                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                                            <circle cx="8.5" cy="8.5" r="1.5" />
-                                            <path d="M21 15l-5-5L5 21" />
-                                        </svg>
-                                        Internship Documentation
-                                    </h4>
-
                                     <div className="grid grid-cols-2 gap-3">
                                         <div className="col-span-2 aspect-video rounded-xl overflow-hidden relative group">
                                             <img src="/internship.jpeg" alt="Infrastructure internship workspace" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                                             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-transparent to-slate-900/50 backdrop-blur-[2.5px] transition-all duration-300 group-hover:backdrop-blur-[2px]" />
                                             <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
-                                            <div className="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                                                <svg className="w-3.5 h-3.5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                                    <path d="M7 11V7a5 5 0 0110 0v4" />
-                                                </svg>
-                                                <span className="text-xs text-slate-300">Privacy</span>
-                                            </div>
                                         </div>
 
                                         <div className="aspect-square rounded-xl overflow-hidden relative group">
                                             <img src="/internship2.jpeg" alt="Team collaboration" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                                             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-transparent to-slate-900/50 backdrop-blur-[2.5px] transition-all duration-300 group-hover:backdrop-blur-[2px]" />
                                             <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
-                                            <div className="absolute top-2 right-2 bg-slate-900/80 backdrop-blur-sm p-1.5 rounded-full">
-                                                <svg className="w-3 h-3 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                                    <path d="M7 11V7a5 5 0 0110 0v4" />
-                                                </svg>
-                                            </div>
                                         </div>
 
                                         <div className="aspect-square rounded-xl overflow-hidden relative group">
                                             <img src="/internship3.jpeg" alt="Server monitoring dashboard" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                                             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-transparent to-slate-900/50 backdrop-blur-[2.5px] transition-all duration-300 group-hover:backdrop-blur-[2px]" />
                                             <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
-                                            <div className="absolute top-2 right-2 bg-slate-900/80 backdrop-blur-sm p-1.5 rounded-full">
-                                                <svg className="w-3 h-3 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                                    <path d="M7 11V7a5 5 0 0110 0v4" />
-                                                </svg>
-                                            </div>
                                         </div>
                                     </div>
 
                                     <div className="mt-3 flex items-center justify-center gap-1.5 text-[10px] text-slate-500">
-                                        <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="M12 16v-4M12 8h.01" />
-                                        </svg>
-                                        <span>Photos blurred for privacy protection</span>
+                                        {/* Privacy Note */}
+                                        <div className="mt-4 flex items-center gap-2 text-xs text-slate-500 justify-center">
+                                            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                                <path d="M7 11V7a5 5 0 0110 0v4" />
+                                            </svg>
+                                            <span>Photos are slightly blurred for privacy</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
