@@ -78,8 +78,8 @@ export default function Contact() {
     const contactMethods = [
         {
             name: "Email",
-            value: "founder@ainash.my.id",
-            href: "mailto:founder@ainash.my.id",
+            value: "secretary@ainash.my.id",
+            href: "mailto:secretary@ainash.my.id",
             icon: (
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
