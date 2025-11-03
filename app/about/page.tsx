@@ -507,10 +507,11 @@ export default function About() {
                             Gained hands-on experience in DevOps practices, server management, and monitoring systems. Worked with cutting-edge infrastructure tools and technologies.
                         </p>
 
+                        {/* 2 kolom: kiri = company + tech + learnings + achievement, kanan = documentation */}
                         <div className="grid lg:grid-cols-2 gap-10">
-                            {/* Left Column - Experience Details */}
+                            {/* LEFT COLUMN */}
                             <div className="space-y-6">
-                                {/* Company Info Card */}
+                                {/* Company Info Card (DIPINDAHKAN KE KIRI) */}
                                 <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
                                     <div className="flex items-start gap-4 mb-6">
                                         <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -531,91 +532,22 @@ export default function About() {
                                             </div>
                                         </div>
                                     </div>
-
                                     <p className="text-slate-300 leading-relaxed">
                                         Collaborated with the infrastructure team to maintain and optimize server systems, implement monitoring solutions, and ensure high availability of critical services.
                                     </p>
                                 </div>
 
-                                {/* Documentation Photo with Blur */}
-                                <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-4 hover:border-blue-500/50 transition-all duration-300">
-                                    <h4 className="text-sm font-semibold text-slate-400 mb-3 flex items-center gap-2">
-                                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                                            <circle cx="8.5" cy="8.5" r="1.5" />
-                                            <path d="M21 15l-5-5L5 21" />
-                                        </svg>
-                                        Internship Documentation
-                                    </h4>
-                                    {/* Photo Grid */}
-                                    <div className="grid grid-cols-2 gap-3">
-                                        {/* Large Photo - Spans 2 columns */}
-                                        <div className="col-span-2 aspect-video rounded-xl overflow-hidden relative group">
-                                            <img src="/internship.jpeg" alt="Infrastructure internship workspace" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                                            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-transparent to-slate-900/50 backdrop-blur-[2.5px] transition-all duration-300 group-hover:backdrop-blur-[2px]" />
-                                            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
-                                            <div className="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                                                <svg className="w-3.5 h-3.5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                                    <path d="M7 11V7a5 5 0 0110 0v4" />
-                                                </svg>
-                                                <span className="text-xs text-slate-300">Privacy</span>
-                                            </div>
-                                        </div>
-
-                                        {/* Small Photo 1 */}
-                                        <div className="aspect-square rounded-xl overflow-hidden relative group">
-                                            <img src="/internship2.jpeg" alt="Team collaboration" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                                            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-transparent to-slate-900/50 backdrop-blur-[2.5px] transition-all duration-300 group-hover:backdrop-blur-[2px]" />
-                                            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
-                                            <div className="absolute top-2 right-2 bg-slate-900/80 backdrop-blur-sm p-1.5 rounded-full">
-                                                <svg className="w-3 h-3 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                                    <path d="M7 11V7a5 5 0 0110 0v4" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                        {/* Small Photo 2 */}
-                                        <div className="aspect-square rounded-xl overflow-hidden relative group">
-                                            <img src="/internship3.jpeg" alt="Server monitoring dashboard" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                                            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-transparent to-slate-900/50 backdrop-blur-[2.5px] transition-all duration-300 group-hover:backdrop-blur-[2px]" />
-                                            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
-                                            <div className="absolute top-2 right-2 bg-slate-900/80 backdrop-blur-sm p-1.5 rounded-full">
-                                                <svg className="w-3 h-3 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                                                    <path d="M7 11V7a5 5 0 0110 0v4" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Privacy Note */}
-                                    <div className="mt-3 flex items-center justify-center gap-1.5 text-[10px] text-slate-500">
-                                        <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <circle cx="12" cy="12" r="10" />
-                                            <path d="M12 16v-4M12 8h.01" />
-                                        </svg>
-                                        <span>Photos blurred for privacy protection</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Right Column - Technologies & Achievements */}
-                            <div className="space-y-6">
-                                {/* Technologies Used */}
+                                {/* Technologies & Tools */}
                                 <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                                     <h3 className="text-xl font-bold mb-5 text-blue-400 flex items-center gap-3">
                                         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                             <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                                         </svg>
-                                        Technologies & Tools
+                                        Technologies &amp; Tools
                                     </h3>
-
                                     <div className="space-y-4">
-                                        {/* DevOps Tools */}
                                         <div>
-                                            <h4 className="text-sm font-semibold text-slate-400 mb-3">DevOps & Infrastructure</h4>
+                                            <h4 className="text-sm font-semibold text-slate-400 mb-3">DevOps &amp; Infrastructure</h4>
                                             <div className="flex flex-wrap gap-2">
                                                 <span className="px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-lg text-sm text-blue-300 font-medium">Linux</span>
                                                 <span className="px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-lg text-sm text-blue-300 font-medium">Ubuntu</span>
@@ -624,10 +556,8 @@ export default function About() {
                                                 <span className="px-3 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-lg text-sm text-blue-300 font-medium">Bash</span>
                                             </div>
                                         </div>
-
-                                        {/* Monitoring Tools */}
                                         <div>
-                                            <h4 className="text-sm font-semibold text-slate-400 mb-3">Monitoring & Observability</h4>
+                                            <h4 className="text-sm font-semibold text-slate-400 mb-3">Monitoring &amp; Observability</h4>
                                             <div className="flex flex-wrap gap-2">
                                                 <span className="px-3 py-1.5 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-sm text-cyan-300 font-medium">Grafana</span>
                                                 <span className="px-3 py-1.5 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-sm text-cyan-300 font-medium">Prometheus</span>
@@ -665,7 +595,7 @@ export default function About() {
                                     </ul>
                                 </div>
 
-                                {/* Achievement Badge */}
+                                {/* Successfully Completed */}
                                 <div className="backdrop-blur-md bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/30 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                                     <div className="flex items-center gap-4">
                                         <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
@@ -680,9 +610,71 @@ export default function About() {
                                     </div>
                                 </div>
                             </div>
+
+                            {/* RIGHT COLUMN — Documentation only */}
+                            <div className="space-y-6">
+                                <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-4 hover:border-blue-500/50 transition-all duration-300">
+                                    <h4 className="text-sm font-semibold text-slate-400 mb-3 flex items-center gap-2">
+                                        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                            <circle cx="8.5" cy="8.5" r="1.5" />
+                                            <path d="M21 15l-5-5L5 21" />
+                                        </svg>
+                                        Internship Documentation
+                                    </h4>
+
+                                    <div className="grid grid-cols-2 gap-3">
+                                        <div className="col-span-2 aspect-video rounded-xl overflow-hidden relative group">
+                                            <img src="/internship.jpeg" alt="Infrastructure internship workspace" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-transparent to-slate-900/50 backdrop-blur-[2.5px] transition-all duration-300 group-hover:backdrop-blur-[2px]" />
+                                            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
+                                            <div className="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5">
+                                                <svg className="w-3.5 h-3.5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                                    <path d="M7 11V7a5 5 0 0110 0v4" />
+                                                </svg>
+                                                <span className="text-xs text-slate-300">Privacy</span>
+                                            </div>
+                                        </div>
+
+                                        <div className="aspect-square rounded-xl overflow-hidden relative group">
+                                            <img src="/internship2.jpeg" alt="Team collaboration" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-transparent to-slate-900/50 backdrop-blur-[2.5px] transition-all duration-300 group-hover:backdrop-blur-[2px]" />
+                                            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
+                                            <div className="absolute top-2 right-2 bg-slate-900/80 backdrop-blur-sm p-1.5 rounded-full">
+                                                <svg className="w-3 h-3 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                                    <path d="M7 11V7a5 5 0 0110 0v4" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div className="aspect-square rounded-xl overflow-hidden relative group">
+                                            <img src="/internship3.jpeg" alt="Server monitoring dashboard" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                                            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/30 via-transparent to-slate-900/50 backdrop-blur-[2.5px] transition-all duration-300 group-hover:backdrop-blur-[2px]" />
+                                            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
+                                            <div className="absolute top-2 right-2 bg-slate-900/80 backdrop-blur-sm p-1.5 rounded-full">
+                                                <svg className="w-3 h-3 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                                    <path d="M7 11V7a5 5 0 0110 0v4" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="mt-3 flex items-center justify-center gap-1.5 text-[10px] text-slate-500">
+                                        <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M12 16v-4M12 8h.01" />
+                                        </svg>
+                                        <span>Photos blurred for privacy protection</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
+
                 {/* Outside of Work / Florist Section */}
                 <section className="py-20 px-4 bg-slate-900/30">
                     <div className="max-w-6xl mx-auto">
