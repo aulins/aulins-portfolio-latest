@@ -528,7 +528,7 @@ export default function About() {
                                                     <circle cx="12" cy="12" r="10" />
                                                     <path d="M12 6v6l4 2" />
                                                 </svg>
-                                                <span>Feb 2024 - Aug 2024 · 7 months</span>
+                                                <span>Sep 2024 - Dec 2024 · 4 months</span>
                                             </div>
                                         </div>
                                     </div>
