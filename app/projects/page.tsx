@@ -347,8 +347,8 @@ export default function Projects() {
                                     </span>
                                     <div>
                                         <div className="text-sm text-slate-500 mb-1">Email</div>
-                                        <a href="mailto:founder@ainash.my.id" className="text-slate-300 hover:text-blue-400 transition-colors">
-                                            founder@ainash.my.id
+                                        <a href="mailto:secretary@ainash.my.id" className="text-slate-300 hover:text-blue-400 transition-colors">
+                                            secretary@ainash.my.id
                                         </a>
                                     </div>
                                 </li>
