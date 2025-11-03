@@ -547,7 +547,6 @@ export default function About() {
                                         </svg>
                                         Internship Documentation
                                     </h4>
-
                                     {/* Photo Grid */}
                                     <div className="grid grid-cols-2 gap-3">
                                         {/* Large Photo - Spans 2 columns */}
@@ -599,59 +598,6 @@ export default function About() {
                                         </svg>
                                         <span>Photos blurred for privacy protection</span>
                                     </div>
-                                </div>
-
-                                {/* Responsibilities */}
-                                <div className="backdrop-blur-md bg-slate-900/50 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
-                                    <h3 className="text-xl font-bold mb-5 text-blue-400 flex items-center gap-3">
-                                        <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                                            <path d="M9 12l2 2 4-4" />
-                                        </svg>
-                                        Key Responsibilities
-                                    </h3>
-                                    <ul className="space-y-3 text-slate-300">
-                                        <li className="flex gap-3 items-start group">
-                                            <span className="mt-1 text-cyan-400 group-hover:scale-110 transition-transform">
-                                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                            </span>
-                                            <span className="leading-relaxed">Managed and maintained Linux-based servers (Ubuntu, CentOS) for production environments</span>
-                                        </li>
-                                        <li className="flex gap-3 items-start group">
-                                            <span className="mt-1 text-cyan-400 group-hover:scale-110 transition-transform">
-                                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                            </span>
-                                            <span className="leading-relaxed">Implemented monitoring systems using Grafana and Prometheus for real-time metrics</span>
-                                        </li>
-                                        <li className="flex gap-3 items-start group">
-                                            <span className="mt-1 text-cyan-400 group-hover:scale-110 transition-transform">
-                                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                            </span>
-                                            <span className="leading-relaxed">Automated deployment processes and system configurations using shell scripts</span>
-                                        </li>
-                                        <li className="flex gap-3 items-start group">
-                                            <span className="mt-1 text-cyan-400 group-hover:scale-110 transition-transform">
-                                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                            </span>
-                                            <span className="leading-relaxed">Collaborated with development teams to troubleshoot and resolve infrastructure issues</span>
-                                        </li>
-                                        <li className="flex gap-3 items-start group">
-                                            <span className="mt-1 text-cyan-400 group-hover:scale-110 transition-transform">
-                                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                                </svg>
-                                            </span>
-                                            <span className="leading-relaxed">Documented infrastructure procedures and created technical guides for team knowledge sharing</span>
-                                        </li>
-                                    </ul>
                                 </div>
                             </div>
 
