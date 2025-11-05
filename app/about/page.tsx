@@ -452,7 +452,7 @@ export default function About() {
                                     {/* Large Photo 1 */}
                                     <div className="col-span-6 sm:col-span-3 aspect-[4/3] rounded-2xl overflow-hidden relative group">
                                         <img src="/lab1.jpeg" alt="Teaching materials preparation" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/10 via-transparent to-slate-900/30" />
+                                        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/10 via-transparent to-slate-900/30 backdrop-blur-[2px] transition-all duration-300 group-hover:backdrop-blur-[1px]" />
                                         <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
                                     </div>
 
