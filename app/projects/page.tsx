@@ -135,7 +135,7 @@ export default function Projects() {
             fullDescription: "Aplikasi manajemen tugas kolaboratif dengan fitur real-time synchronization, drag-and-drop interface, team collaboration, dan notification system. Perfect untuk project management.",
             type: "Web App",
             tech: ["React", "Firebase", "Tailwind CSS"],
-            image: "/task-app.png",
+            image: "/InProgress.jpg",
             year: "2024",
             status: "In Progress",
             github: "https://github.com/aulins/task-manager",
