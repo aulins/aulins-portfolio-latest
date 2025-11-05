@@ -50,7 +50,7 @@ export default function Home() {
         {
             title: "Web Development",
             description: "Building responsive and modern web applications with latest technologies",
-            skills: ["React", "Next.js", "CodeIgniter"],
+            skills: ["PHP", "Flask", "CodeIgniter"],
         },
         {
             title: "Backend Development",
