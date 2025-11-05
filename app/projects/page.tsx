@@ -24,7 +24,7 @@ export default function Projects() {
                 "Machine learning project menggunakan Convolutional Neural Networks (CNN) untuk mengklasifikasikan berbagai jenis pola batik Indonesia. Model ini dilatih dengan dataset batik yang mencakup berbagai motif dan dapat mengidentifikasi pola dengan akurasi tinggi.",
             type: "Machine Learning",
             tech: ["Python", "TensorFlow", "CNN", "Keras"],
-            image: "/skripsi.png",
+            image: "/skripsi.jpg",
             year: "2025",
             status: "Completed",
             github: "https://github.com/aulins/batik-classification",

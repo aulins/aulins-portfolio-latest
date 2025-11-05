@@ -74,7 +74,7 @@ export default function Home() {
             title: "Batik Image Classification",
             description: "Machine learning model for batik pattern classification",
             tech: ["Python", "TensorFlow", "CNN"],
-            image: "/skripsi.png",
+            image: "/skripsi.jpg",
             year: "2025",
         },
         {
