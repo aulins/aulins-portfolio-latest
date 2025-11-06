@@ -53,8 +53,8 @@ export default function Projects() {
             image: "/myweb.jpg",
             year: "2025",
             status: "Live",
-            github: "https://github.com/aulins/analytics-dashboard",
-            live: "https://dashboard-demo.vercel.app",
+            github: "https://github.com/aulins/aulins-portfolio-latest",
+            live: "https://ainash.my.id",
         },
         {
             title: "Model Prediction of Passing Grades",
@@ -90,8 +90,8 @@ export default function Projects() {
             image: "/flower.png",
             year: "2025",
             status: "Live",
-            github: "https://github.com/aulins/analytics-dashboard",
-            live: "https://dashboard-demo.vercel.app",
+            github: "https://github.com/aulins/florist-shop",
+            live: "https://florist.ainash.my.id",
         },
         {
             title: "Extract Transform Load - Data",
