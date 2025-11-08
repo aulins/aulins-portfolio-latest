@@ -66,7 +66,7 @@ export default function Navbar() {
                         <p className="text-slate-400 text-sm mb-4 font-medium">Connect</p>
                         <div className="flex space-x-4">
                             <a
-                                href="https://github.com/yourusername"
+                                href="https://github.com/aulins"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-slate-800/80 rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110 group"
@@ -77,7 +77,7 @@ export default function Navbar() {
                                 </svg>
                             </a>
                             <a
-                                href="https://linkedin.com/in/yourusername"
+                                href="https://linkedin.com/in/auliaintanshafira"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-slate-800/80 rounded-full flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover:scale-110 group"
@@ -88,7 +88,7 @@ export default function Navbar() {
                                 </svg>
                             </a>
                             <a
-                                href="https://instagram.com/yourusername"
+                                href="https://instagram.com/aulia_intan12"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 bg-slate-800/80 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 transition-all duration-300 hover:scale-110 group"
