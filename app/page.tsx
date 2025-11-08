@@ -50,7 +50,7 @@ export default function Home() {
         {
             title: "Web Development",
             description: "Building responsive and modern web applications with latest technologies",
-            skills: ["PHP", "Flask", "CodeIgniter"],
+            skills: ["PHP", "Flask", "CodeIgniter", "React", "Next.js"],
         },
         {
             title: "Backend Development",
@@ -78,17 +78,17 @@ export default function Home() {
             year: "2025",
         },
         {
-            title: "Analytics Dashboard",
-            description: "Real-time data visualization with Grafana",
-            tech: ["Python", "Grafana", "Prometheus"],
-            image: "/dashboard.png",
+            title: "Heygifts Fleur Shop",
+            description: "Website for selling flower bouquets with online payment integration",
+            tech: ["Next.js", "TypeScript", "Supabase", "Midtrans"],
+            image: "/flower.jpg",
             year: "2025",
         },
         {
-            title: "ML Prediction Model",
-            description: "Machine learning model for sales forecasting",
-            tech: ["Python", "TensorFlow", "Pandas"],
-            image: "/prediksi.png",
+            title: "Analytics Dashboard",
+            description: "Real-time data visualization with Grafana",
+            tech: ["Python", "Grafana", "Prometheus"],
+            image: "/monitoring.jpg",
             year: "2025",
         },
     ];
@@ -203,7 +203,7 @@ export default function Home() {
                                 Hi. I&apos;m Ulya. <br /> A Developer.
                             </span>
                         </h1>
-                        <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto">I&apos;m passionate about developing modern web systems that integrate data, AI, and DevOps for smarter solutions.</p>
+                        <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl mx-auto">I&apos;m passionate about developing web systems that integrate data, AI, and DevOps for smarter solutions.</p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link href="/projects" className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-105">
                                 View Projects

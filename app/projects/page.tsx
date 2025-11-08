@@ -82,12 +82,11 @@ export default function Projects() {
         // },
         {
             title: "Heygifts Fleur Shop",
-            shortDescription: "Real-time monitoring dashboard dengan Grafana dan Prometheus",
-            fullDescription:
-                "Dashboard monitoring sistem real-time yang menampilkan metrics performa server, penggunaan resource, dan visualisasi data secara interaktif. Terintegrasi dengan Prometheus untuk data collection dan Grafana untuk visualization.",
+            shortDescription: "Website for selling flower bouquets with online payment integration",
+            fullDescription: "Website for selling flower bouquets with online payment integration using Midtrans. Built with Next.js and Supabase to manage products, orders, and shopping cart.",
             type: "Fullstack",
-            tech: ["Python", "Grafana", "Prometheus", "Docker"],
-            image: "/flower.png",
+            tech: ["Next.js", "TypeScript", "Supabase", "Midtrans"],
+            image: "/flower.jpg",
             year: "2025",
             status: "Live",
             github: "https://github.com/aulins/florist-shop",
@@ -131,7 +130,7 @@ export default function Projects() {
             live: "https://figma.com/portfolio-design",
         },
         {
-            title: "website services ",
+            title: "Website Services ",
             shortDescription: "Collaborative task management dengan real-time updates",
             fullDescription: "Aplikasi manajemen tugas kolaboratif dengan fitur real-time synchronization, drag-and-drop interface, team collaboration, dan notification system. Perfect untuk project management.",
             type: "Web App",
