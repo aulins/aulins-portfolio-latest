@@ -185,9 +185,9 @@ export default function Projects() {
             case "UI/UX Design":
                 return "bg-pink-500/20 text-pink-400 border-pink-500/30";
             case "Data Engineering":
-                return "bg-yellow-500/20 text-yellow-400 border-pink-500/30";
+                return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30";
             case "Backend":
-                return "bg-green-500/20 text-green-400 border-pink-500/30";
+                return "bg-white-500/20 text-white-400 border-white-500/30";
             default:
                 return "bg-slate-500/20 text-slate-400 border-slate-500/30";
         }
