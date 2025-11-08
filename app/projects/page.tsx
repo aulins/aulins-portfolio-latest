@@ -19,9 +19,9 @@ export default function Projects() {
     const projects = [
         {
             title: "Batik Image Classification",
-            shortDescription: "Deep learning model untuk klasifikasi pola batik Indonesia",
+            shortDescription: "Deep learning model for batik pattern classification",
             fullDescription:
-                "Machine learning project menggunakan Convolutional Neural Networks (CNN) untuk mengklasifikasikan berbagai jenis pola batik Indonesia. Model ini dilatih dengan dataset batik yang mencakup berbagai motif dan dapat mengidentifikasi pola dengan akurasi tinggi.",
+                "A machine learning project using Convolutional Neural Networks (CNN) to classify various types of Garut batik patterns from West Java. The model is trained on a diverse batik dataset and can identify patterns with high accuracy.",
             type: "Machine Learning",
             tech: ["Python", "TensorFlow", "CNN", "Keras"],
             image: "/skripsi.jpg",
@@ -32,24 +32,23 @@ export default function Projects() {
         },
         {
             title: "Analytics Dashboard",
-            shortDescription: "Real-time monitoring dashboard dengan Grafana dan Prometheus",
+            shortDescription: "Real-time monitoring dashboard with Grafana and Prometheus",
             fullDescription:
-                "Dashboard monitoring sistem real-time yang menampilkan metrics performa server, penggunaan resource, dan visualisasi data secara interaktif. Terintegrasi dengan Prometheus untuk data collection dan Grafana untuk visualization.",
+                "A real-time system monitoring dashboard that displays machine learning model performance metrics, resource usage, and interactive data visualizations. Integrated with Prometheus for data collection and Grafana for visualization.",
             type: "Fullstack",
             tech: ["Python", "Grafana", "Prometheus", "Docker"],
             image: "/monitoring.jpg",
             year: "2025",
             status: "Completed",
-            github: "https://github.com/aulins/analytics-dashboard",
-            live: "https://dashboard-demo.vercel.app",
+            github: "https://github.com/aulins/workflow_ci",
+            live: null,
         },
         {
             title: "My Web Portfolio",
-            shortDescription: "Real-time monitoring dashboard dengan Grafana dan Prometheus",
-            fullDescription:
-                "Dashboard monitoring sistem real-time yang menampilkan metrics performa server, penggunaan resource, dan visualisasi data secara interaktif. Terintegrasi dengan Prometheus untuk data collection dan Grafana untuk visualization.",
+            shortDescription: "Personal portfolio website built with Next.js and TypeScript.",
+            fullDescription: "A personal web portfolio built with Next.js to showcase projects, experiences, and contact information. Includes dynamic project rendering, contact form with API integration, and responsive modern UI design.",
             type: "Fullstack",
-            tech: ["Python", "Grafana", "Prometheus", "Docker"],
+            tech: ["Next.js", "TypeScript", "TailwindCSS", "Supabase"],
             image: "/myweb.jpg",
             year: "2025",
             status: "Live",
@@ -58,10 +57,11 @@ export default function Projects() {
         },
         {
             title: "Model Prediction of Passing Grades",
-            shortDescription: "ML model untuk forecasting penjualan menggunakan time series analysis",
-            fullDescription: "Sistem prediksi penjualan menggunakan algoritma machine learning untuk forecasting. Model ini menganalisis historical data dan menghasilkan prediksi yang akurat untuk membantu business planning.",
+            shortDescription: "Machine learning model for predicting student passing grades.",
+            fullDescription:
+                "A machine learning project that predicts student passing grades based on academic performance and related factors. The model applies data preprocessing, feature selection, and supervised learning algorithms to generate accurate grade predictions for academic evaluation and decision support.",
             type: "Machine Learning",
-            tech: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
+            tech: ["Python", "Pandas", "Scikit-learn", "Matplotlib"],
             image: "/prediksi.jpg",
             year: "2025",
             status: "Completed",
@@ -94,14 +94,15 @@ export default function Projects() {
         },
         {
             title: "Extract Transform Load - Data",
-            shortDescription: "ML model untuk forecasting penjualan menggunakan time series analysis",
-            fullDescription: "Sistem prediksi penjualan menggunakan algoritma machine learning untuk forecasting. Model ini menganalisis historical data dan menghasilkan prediksi yang akurat untuk membantu business planning.",
-            type: "Machine Learning",
-            tech: ["Python", "TensorFlow", "Pandas", "Scikit-learn"],
+            shortDescription: "Data pipeline for cleaning, transforming, and preparing datasets for analysis.",
+            fullDescription:
+                "An ETL (Extract, Transform, Load) project that automates data preprocessing workflows. It extracts raw data from multiple sources, performs data cleaning and transformation using Python, and loads structured data into a ready-to-analyze format for further analytics or machine learning tasks.",
+            type: "Data Engineering",
+            tech: ["Python", "Pandas", "NumPy", "Matplotlib"],
             image: "/etl.jpg",
             year: "2025",
             status: "Completed",
-            github: "https://github.com/aulins/sales-prediction",
+            github: "https://github.com/aulins/ETL",
             live: null,
         },
         // {
@@ -119,39 +120,41 @@ export default function Projects() {
 
         {
             title: "DokterKu Website Design",
-            shortDescription: "Modern portfolio design dengan dark theme dan smooth animations",
-            fullDescription: "Desain portfolio website modern dengan fokus pada user experience, animasi yang smooth, dan responsive layout. Menggunakan Figma untuk prototyping dan design system.",
+            shortDescription: "UI/UX design for an online doctor consultation platform.",
+            fullDescription:
+                "A modern UI/UX design for a healthcare website that enables users to consult with doctors online. Designed in Figma with a clean layout, intuitive navigation, and responsive structure to enhance accessibility and user experience.",
             type: "UI/UX Design",
             tech: ["Figma", "UI/UX", "Prototyping"],
             image: "/UI.jpg",
-            year: "2024",
+            year: "2023",
             status: "Completed",
             github: null,
-            live: "https://figma.com/portfolio-design",
+            live: "https://figma.com/",
         },
         {
             title: "Website Services ",
-            shortDescription: "Collaborative task management dengan real-time updates",
-            fullDescription: "Aplikasi manajemen tugas kolaboratif dengan fitur real-time synchronization, drag-and-drop interface, team collaboration, dan notification system. Perfect untuk project management.",
+            shortDescription: "Profile website showcasing service information.",
+            fullDescription:
+                "A dummy company profile website built with CodeIgniter to showcase business services, contact details, and brand identity. Designed with a clean layout and interactive interface to deliver an engaging user experience",
             type: "Web App",
-            tech: ["React", "Firebase", "Tailwind CSS"],
+            tech: ["HTML", "CSS", "CodeIgniter", "MySQL"],
             image: "/jwp.jpg",
             year: "2024",
             status: "Completed",
             github: "https://github.com/aulins/website-services",
-            live: "https://task-app-demo.vercel.app",
+            live: null,
         },
         {
             title: "Invoice",
-            shortDescription: "Collaborative task management dengan real-time updates",
-            fullDescription: "Aplikasi manajemen tugas kolaboratif dengan fitur real-time synchronization, drag-and-drop interface, team collaboration, dan notification system. Perfect untuk project management.",
-            type: "Web App",
-            tech: ["React", "Firebase", "Tailwind CSS"],
+            shortDescription: "FastAPI for managing invoices and transaction data.",
+            fullDescription: "Backend API built with Python using FastAPI to manage invoices, including creating, updating, and retrieving transaction data.",
+            type: "Backend",
+            tech: ["Python", "FastAPI", "SQL"],
             image: "/InProgress.jpg",
-            year: "2024",
+            year: "2025",
             status: "In Progress",
-            github: "https://github.com/aulins/task-manager",
-            live: "https://task-app-demo.vercel.app",
+            github: "https://github.com/aulins/invoice-api",
+            live: null,
         },
         // {
         //     title: "Task Management Web App",
@@ -181,6 +184,10 @@ export default function Projects() {
                 return "bg-cyan-500/20 text-cyan-400 border-cyan-500/30";
             case "UI/UX Design":
                 return "bg-pink-500/20 text-pink-400 border-pink-500/30";
+            case "Data Engineering":
+                return "bg-yellow-500/20 text-yellow-400 border-pink-500/30";
+            case "Backend":
+                return "bg-green-500/20 text-green-400 border-pink-500/30";
             default:
                 return "bg-slate-500/20 text-slate-400 border-slate-500/30";
         }
