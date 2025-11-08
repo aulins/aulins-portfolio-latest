@@ -94,33 +94,51 @@ export default function About() {
     // Certifications
     const certifications = [
         {
-            title: "AWS Certified Cloud Practitioner",
-            issuer: "Amazon Web Services",
+            title: "Azure Fundamentals",
+            issuer: "Microsoft",
             year: "2024",
             linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
         },
         {
-            title: "TensorFlow Developer Certificate",
-            issuer: "Google",
-            year: "2023",
+            title: "GIT Lanjutan",
+            issuer: "Codepolitan",
+            year: "2025",
             linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
         },
         {
-            title: "Python for Data Science",
-            issuer: "IBM",
-            year: "2023",
-            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
-        },
-        {
-            title: "React - The Complete Guide",
-            issuer: "Udemy",
-            year: "2023",
-            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
-        },
-        {
-            title: "Grafana Fundamentals",
-            issuer: "Grafana Labs",
+            title: "IBM SkillsBuild For AI & Cybersecurity - MAGANG DAN STUDI INDEPENDEN BERSERTIFIKAT",
+            issuer: "PT Hacktivate Teknologi Indonesia",
             year: "2024",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
+        },
+        {
+            title: "Belajar Machine Learning",
+            issuer: "Dicoding Indonesia",
+            year: "2023",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
+        },
+        {
+            title: "Pemrograman dengan Python",
+            issuer: "Dicoding Indonesia",
+            year: "2023",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
+        },
+        {
+            title: "Dasar Visualisasi Data",
+            issuer: "Dicoding Indonesia",
+            year: "2023",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
+        },
+        {
+            title: "Membuat Infografis dengan Icon hingga Ilustrasi Flat",
+            issuer: "SekolahDesain",
+            year: "2021",
+            linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
+        },
+        {
+            title: "Merancang Tampilan Website",
+            issuer: "SekolahDesain",
+            year: "2021",
             linkedinUrl: "https://www.linkedin.com/in/auliaintanshafira/details/certifications/",
         },
     ];
@@ -128,7 +146,7 @@ export default function About() {
     // Languages
     const languages = [
         { name: "Indonesian", level: "Native", percentage: 100, flag: "🇮🇩" },
-        { name: "English", level: "Intermediate", percentage: 60, flag: "🇬🇧" },
+        { name: "English", level: "Intermediate", percentage: 68, flag: "🇬🇧" },
     ];
 
     // Generate stars
@@ -241,12 +259,12 @@ export default function About() {
                                 {/* Bio Paragraphs */}
                                 <div className="space-y-6 mb-12">
                                     <p className="text-lg text-slate-300 leading-relaxed">
-                                        Hello! I am Aulia Intan Shafira, a passionate fullstack developer with a strong interest in creating modern web applications that integrate data science, artificial intelligence, and DevOps practices.
-                                        I love turning complex problems into elegant, scalable solutions.
+                                        Hello! I am Aulia Intan Shafira, a passionate fullstack developer with a strong interest in creating web applications that integrate data science, artificial intelligence, and DevOps practices. I love
+                                        turning complex problems into elegant, scalable solutions.
                                     </p>
                                     <p className="text-lg text-slate-300 leading-relaxed">
-                                        With over 2 years of experience in software development, I have worked on various projects ranging from e-commerce platforms to machine learning applications. I am constantly learning new technologies
-                                        and best practices to deliver high-quality solutions that make a real impact.
+                                        With over 2 years of experience in software development, I have worked on various projects ranging from web applications to machine learning applications. I am constantly learning new technologies and
+                                        best practices to deliver high-quality solutions that make a real impact.
                                     </p>
                                 </div>
 
@@ -377,8 +395,7 @@ export default function About() {
                             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Part-time Teaching Assistant</span>
                         </h2>
                         <p className="text-center text-slate-400 mb-12 max-w-3xl mx-auto">
-                            I worked part-time as an assistant in the Informatics Laboratory—teaching lab sessions, preparing learning materials, creating assessment rubrics, assisting students during practicums, and coordinating grading &
-                            recap each semester.
+                            I worked part-time as an assistant in the Informatics Laboratory—teaching lab sessions, preparing learning materials, creating assessment rubrics, assisting students during practicums, and coordinating grading.
                         </p>
 
                         <div className="grid lg:grid-cols-2 gap-10 items-start">
@@ -501,7 +518,7 @@ export default function About() {
                 <section className="py-20 px-4 bg-slate-900/30">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-4xl font-bold mb-6 text-center">
-                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Infrastructure Administrator Internship</span>
+                            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Infrastructure Administrator Internship Experience </span>
                         </h2>
                         <p className="text-center text-slate-400 mb-12 max-w-3xl mx-auto">
                             Gained hands-on experience in DevOps practices, server management, and monitoring systems. Worked with cutting-edge infrastructure tools and technologies.
@@ -522,7 +539,7 @@ export default function About() {
                                         </div>
                                         <div className="flex-1">
                                             <h3 className="text-xl font-bold text-blue-400 mb-1">Infrastructure Administrator</h3>
-                                            <p className="text-slate-300 mb-2">Company Name</p>
+                                            <p className="text-slate-300 mb-2">Kemendikbudristek</p>
                                             <div className="flex items-center gap-2 text-sm text-slate-400">
                                                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                                     <circle cx="12" cy="12" r="10" />
@@ -741,7 +758,7 @@ export default function About() {
                         <div className="grid md:grid-cols-3 gap-12 mb-12">
                             <div>
                                 <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text mb-4">Ulya A. ✨</h3>
-                                <p className="text-slate-400 leading-relaxed mb-6">Fullstack Developer passionate about crafting beautiful, responsive interfaces and diving into data to make experiences smarter and more impactful.</p>
+                                <p className="text-slate-400 leading-relaxed mb-6">Fullstack Developer passionate about developing web systems that integrate data, AI, and DevOps for smarter solutions.</p>
                                 <div className="flex space-x-4">
                                     <a
                                         href="https://github.com/aulins"

@@ -354,7 +354,7 @@ export default function Home() {
                             {/* About/Bio Column */}
                             <div>
                                 <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text mb-4">Ulya A. ✨</h3>
-                                <p className="text-slate-400 leading-relaxed mb-6">Fullstack Developer passionate about crafting beautiful, responsive interfaces and diving into data to make experiences smarter and more impactful.</p>
+                                <p className="text-slate-400 leading-relaxed mb-6">Fullstack Developer passionate about developing web systems that integrate data, AI, and DevOps for smarter solutions.</p>
                                 <div className="flex space-x-4">
                                     <a
                                         href="https://github.com/aulins"
