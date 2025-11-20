@@ -43,7 +43,7 @@ export default function Projects() {
             live: "https://florist.ainash.my.id",
         },
         {
-            title: "Analytics Dashboard",
+            title: "Analytics Dashboard - MLOps",
             shortDescription: "Real-time monitoring dashboard with Grafana and Prometheus",
             fullDescription:
                 "A real-time system monitoring dashboard that displays machine learning model performance metrics, resource usage, and interactive data visualizations. Integrated with Prometheus for data collection and Grafana for visualization.",
